@@ -44,7 +44,10 @@ thead th.test-name { z-index: 3; background: #f0f0f0; }
 <body>
 <h1>JBIG2 Decoder Compatibility Report</h1>
 <p style="margin: 10px 0 16px; color: #555; max-width: 800px; line-height: 1.5;">
-Compatibility results for various JBIG2 decoders against
+<a href="https://en.wikipedia.org/wiki/JBIG2">JBIG2</a> is a compression standard
+for bi-level (black &amp; white) images.
+Every PDF viewer implements a JBIG2 decoder.
+This page shows results for various JBIG2 decoders against
 <a href="https://github.com/SerenityOS/serenity/tree/master/Tests/LibGfx/test-inputs/jbig2">107 test files</a>
 from the SerenityOS repository. Each test file encodes the same 399&times;400 1-bit bitmap.
 Decoders that take a PDF as input use a thin PDF wrapper around the raw JBIG2 data.
@@ -1622,7 +1625,7 @@ Warning: Dependent image isn&#x27;t ready yet
 </code>
 </div></td>
 <td class="cell"><span class="error-mark">—</span>
-<div class="tooltip"><h4>Error:</h4><code>exit code 245</code>
+<div class="tooltip"><h4>Error:</h4><code>timeout (5s)</code>
 <h4>Reproduce:</h4><code>/usr/bin/python3 jbig2_ref_wrapper.py /Users/thakis/Downloads/T-REC-T.88-201808-I!!SOFT-ZST-E/Software/JBIG2_SampleSoftware-A20180829/source/jbig2 build/jbig2/bitmap-refine-tpgron.jbig2 build/output/itu-ref/bitmap-refine-tpgron.bmp</code>
 </div></td>
 </tr>
