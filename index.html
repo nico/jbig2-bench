@@ -73,9 +73,9 @@ Download all test files: <a href="build/jbig2-tests.zip">jbig2</a>,
 <span class="fail">28</span> / 
 <span class="error">0</span></div><div style="font-size:11px;color:#999;margin-top:2px">mutool version 1.23.3</div></div>
 <div class="summary-card"><h3>preview</h3>
-<div class="num"><span class="pass">78</span> / 
+<div class="num"><span class="pass">79</span> / 
 <span class="fail">28</span> / 
-<span class="error">1</span></div><div style="font-size:11px;color:#999;margin-top:2px">sips-316</div></div>
+<span class="error">0</span></div><div style="font-size:11px;color:#999;margin-top:2px">sips-316</div></div>
 <div class="summary-card"><h3>ghostscript</h3>
 <div class="num"><span class="pass">79</span> / 
 <span class="fail">28</span> / 
@@ -94,8 +94,12 @@ Download all test files: <a href="build/jbig2-tests.zip">jbig2</a>,
 <span class="error">1</span></div><div style="font-size:11px;color:#999;margin-top:2px">pdfjs-dist 5.4.624</div></div>
 <div class="summary-card"><h3>itu-ref</h3>
 <div class="num"><span class="pass">19</span> / 
-<span class="fail">39</span> / 
-<span class="error">49</span></div></div>
+<span class="fail">38</span> / 
+<span class="error">50</span></div></div>
+<div class="summary-card"><h3>hayro-jbig2</h3>
+<div class="num"><span class="pass">107</span> / 
+<span class="fail">0</span> / 
+<span class="error">0</span></div></div>
 </div>
 <p>
 Green (<span class="pass-mark">&#x2713;</span>) = pixel-perfect match against the reference,
@@ -107,12 +111,13 @@ gray (<span class="error-mark">—</span>) = error or timeout.
 <th><a href="https://jbig2dec.com/" style="color:inherit;text-decoration:none;border-bottom:1px dashed #999">jbig2dec</a><span class="pct">73%</span></th>
 <th><a href="https://pdfium.googlesource.com/pdfium/" style="color:inherit;text-decoration:none;border-bottom:1px dashed #999">pdfium</a><span class="pct">100%</span></th>
 <th><a href="https://mupdf.com/" style="color:inherit;text-decoration:none;border-bottom:1px dashed #999">mupdf</a><span class="pct">73%</span></th>
-<th><a href="https://support.apple.com/guide/preview/welcome/mac" style="color:inherit;text-decoration:none;border-bottom:1px dashed #999">preview</a><span class="pct">72%</span></th>
+<th><a href="https://support.apple.com/guide/preview/welcome/mac" style="color:inherit;text-decoration:none;border-bottom:1px dashed #999">preview</a><span class="pct">73%</span></th>
 <th><a href="https://www.ghostscript.com/" style="color:inherit;text-decoration:none;border-bottom:1px dashed #999">ghostscript</a><span class="pct">73%</span></th>
 <th><a href="https://poppler.freedesktop.org/" style="color:inherit;text-decoration:none;border-bottom:1px dashed #999">poppler</a><span class="pct">83%</span></th>
 <th><a href="https://github.com/SerenityOS/serenity" style="color:inherit;text-decoration:none;border-bottom:1px dashed #999">serenity-image</a><span class="pct">100%</span></th>
 <th><a href="https://mozilla.github.io/pdf.js/" style="color:inherit;text-decoration:none;border-bottom:1px dashed #999">pdfjs</a><span class="pct">57%</span></th>
 <th><a href="https://www.itu.int/rec/T-REC-T.88/en" style="color:inherit;text-decoration:none;border-bottom:1px dashed #999">itu-ref</a><span class="pct">17%</span></th>
+<th><a href="https://crates.io/crates/hayro-jbig2" style="color:inherit;text-decoration:none;border-bottom:1px dashed #999">hayro-jbig2</a><span class="pct">100%</span></th>
 </tr></thead><tbody>
 <tr><td class="test-name">bitmap-composite-and-xnor-halftone<span class="file-links"><a href="build/jbig2/bitmap-composite-and-xnor-halftone.jbig2">jbig2</a><a href="build/pdfs/bitmap-composite-and-xnor-halftone.pdf">pdf</a><a href="https://github.com/SerenityOS/serenity/blob/master/Tests/LibGfx/test-inputs/jbig2/json/bitmap-composite-and-xnor-halftone.json">json</a></span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
@@ -157,6 +162,7 @@ Warning: Dependent image isn&#x27;t ready yet
 <img loading="lazy" src="build/diffs/itu-ref/bitmap-composite-and-xnor-halftone.png" alt="diff">
 <h4>Reproduce:</h4><code>/usr/bin/python3 jbig2_ref_wrapper.py /Users/thakis/Downloads/T-REC-T.88-201808-I!!SOFT-ZST-E/Software/JBIG2_SampleSoftware-A20180829/source/jbig2 build/jbig2/bitmap-composite-and-xnor-halftone.jbig2 build/output/itu-ref/bitmap-composite-and-xnor-halftone.bmp</code>
 </div></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 </tr>
 <tr><td class="test-name">bitmap-composite-and-xnor-refine<span class="file-links"><a href="build/jbig2/bitmap-composite-and-xnor-refine.jbig2">jbig2</a><a href="build/pdfs/bitmap-composite-and-xnor-refine.pdf">pdf</a><a href="https://github.com/SerenityOS/serenity/blob/master/Tests/LibGfx/test-inputs/jbig2/json/bitmap-composite-and-xnor-refine.json">json</a></span></td>
 <td class="cell"><span class="fail-mark">&#x2717;</span>
@@ -227,6 +233,7 @@ Warning: Dependent image isn&#x27;t ready yet
 <h4>stderr:</h4><code>libc++abi: terminating due to uncaught exception of type std::bad_alloc: std::bad_alloc
 </code>
 </div></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 </tr>
 <tr><td class="test-name">bitmap-composite-and-xnor-text<span class="file-links"><a href="build/jbig2/bitmap-composite-and-xnor-text.jbig2">jbig2</a><a href="build/pdfs/bitmap-composite-and-xnor-text.pdf">pdf</a><a href="https://github.com/SerenityOS/serenity/blob/master/Tests/LibGfx/test-inputs/jbig2/json/bitmap-composite-and-xnor-text.json">json</a></span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
@@ -257,6 +264,7 @@ Warning: Dependent image isn&#x27;t ready yet
 <img loading="lazy" src="build/diffs/itu-ref/bitmap-composite-and-xnor-text.png" alt="diff">
 <h4>Reproduce:</h4><code>/usr/bin/python3 jbig2_ref_wrapper.py /Users/thakis/Downloads/T-REC-T.88-201808-I!!SOFT-ZST-E/Software/JBIG2_SampleSoftware-A20180829/source/jbig2 build/jbig2/bitmap-composite-and-xnor-text.jbig2 build/output/itu-ref/bitmap-composite-and-xnor-text.bmp</code>
 </div></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 </tr>
 <tr><td class="test-name">bitmap-composite-and-xnor<span class="file-links"><a href="build/jbig2/bitmap-composite-and-xnor.jbig2">jbig2</a><a href="build/pdfs/bitmap-composite-and-xnor.pdf">pdf</a><a href="https://github.com/SerenityOS/serenity/blob/master/Tests/LibGfx/test-inputs/jbig2/json/bitmap-composite-and-xnor.json">json</a></span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
@@ -283,6 +291,7 @@ Warning: Dependent image isn&#x27;t ready yet
 <div class="tooltip"><h4>Error:</h4><code>exit code 245</code>
 <h4>Reproduce:</h4><code>/usr/bin/python3 jbig2_ref_wrapper.py /Users/thakis/Downloads/T-REC-T.88-201808-I!!SOFT-ZST-E/Software/JBIG2_SampleSoftware-A20180829/source/jbig2 build/jbig2/bitmap-composite-and-xnor.jbig2 build/output/itu-ref/bitmap-composite-and-xnor.bmp</code>
 </div></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 </tr>
 <tr><td class="test-name">bitmap-composite-or-xor-replace-halftone<span class="file-links"><a href="build/jbig2/bitmap-composite-or-xor-replace-halftone.jbig2">jbig2</a><a href="build/pdfs/bitmap-composite-or-xor-replace-halftone.pdf">pdf</a><a href="https://github.com/SerenityOS/serenity/blob/master/Tests/LibGfx/test-inputs/jbig2/json/bitmap-composite-or-xor-replace-halftone.json">json</a></span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
@@ -313,6 +322,7 @@ Warning: Dependent image isn&#x27;t ready yet
 <img loading="lazy" src="build/diffs/itu-ref/bitmap-composite-or-xor-replace-halftone.png" alt="diff">
 <h4>Reproduce:</h4><code>/usr/bin/python3 jbig2_ref_wrapper.py /Users/thakis/Downloads/T-REC-T.88-201808-I!!SOFT-ZST-E/Software/JBIG2_SampleSoftware-A20180829/source/jbig2 build/jbig2/bitmap-composite-or-xor-replace-halftone.jbig2 build/output/itu-ref/bitmap-composite-or-xor-replace-halftone.bmp</code>
 </div></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 </tr>
 <tr><td class="test-name">bitmap-composite-or-xor-replace-refine<span class="file-links"><a href="build/jbig2/bitmap-composite-or-xor-replace-refine.jbig2">jbig2</a><a href="build/pdfs/bitmap-composite-or-xor-replace-refine.pdf">pdf</a><a href="https://github.com/SerenityOS/serenity/blob/master/Tests/LibGfx/test-inputs/jbig2/json/bitmap-composite-or-xor-replace-refine.json">json</a></span></td>
 <td class="cell"><span class="fail-mark">&#x2717;</span>
@@ -383,6 +393,7 @@ Warning: Dependent image isn&#x27;t ready yet
 <h4>stderr:</h4><code>libc++abi: terminating due to uncaught exception of type std::bad_alloc: std::bad_alloc
 </code>
 </div></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 </tr>
 <tr><td class="test-name">bitmap-composite-or-xor-replace-text<span class="file-links"><a href="build/jbig2/bitmap-composite-or-xor-replace-text.jbig2">jbig2</a><a href="build/pdfs/bitmap-composite-or-xor-replace-text.pdf">pdf</a><a href="https://github.com/SerenityOS/serenity/blob/master/Tests/LibGfx/test-inputs/jbig2/json/bitmap-composite-or-xor-replace-text.json">json</a></span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
@@ -411,6 +422,7 @@ Warning: Dependent image isn&#x27;t ready yet
 <h4>stderr:</h4><code>libc++abi: terminating due to uncaught exception of type std::bad_alloc: std::bad_alloc
 </code>
 </div></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 </tr>
 <tr><td class="test-name">bitmap-composite-or-xor-replace<span class="file-links"><a href="build/jbig2/bitmap-composite-or-xor-replace.jbig2">jbig2</a><a href="build/pdfs/bitmap-composite-or-xor-replace.pdf">pdf</a><a href="https://github.com/SerenityOS/serenity/blob/master/Tests/LibGfx/test-inputs/jbig2/json/bitmap-composite-or-xor-replace.json">json</a></span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
@@ -437,8 +449,10 @@ Warning: Dependent image isn&#x27;t ready yet
 <div class="tooltip"><h4>Error:</h4><code>exit code 245</code>
 <h4>Reproduce:</h4><code>/usr/bin/python3 jbig2_ref_wrapper.py /Users/thakis/Downloads/T-REC-T.88-201808-I!!SOFT-ZST-E/Software/JBIG2_SampleSoftware-A20180829/source/jbig2 build/jbig2/bitmap-composite-or-xor-replace.jbig2 build/output/itu-ref/bitmap-composite-or-xor-replace.bmp</code>
 </div></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 </tr>
 <tr><td class="test-name">bitmap-customat-tpgdon<span class="file-links"><a href="build/jbig2/bitmap-customat-tpgdon.jbig2">jbig2</a><a href="build/pdfs/bitmap-customat-tpgdon.pdf">pdf</a><a href="https://github.com/SerenityOS/serenity/blob/master/Tests/LibGfx/test-inputs/jbig2/json/bitmap-customat-tpgdon.json">json</a></span></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
@@ -459,6 +473,7 @@ Warning: Dependent image isn&#x27;t ready yet
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 </tr>
 <tr><td class="test-name">bitmap-halftone-10bpp-mmr<span class="file-links"><a href="build/jbig2/bitmap-halftone-10bpp-mmr.jbig2">jbig2</a><a href="build/pdfs/bitmap-halftone-10bpp-mmr.pdf">pdf</a><a href="https://github.com/SerenityOS/serenity/blob/master/Tests/LibGfx/test-inputs/jbig2/json/bitmap-halftone-10bpp-mmr.json">json</a></span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
@@ -470,9 +485,10 @@ Warning: Dependent image isn&#x27;t ready yet
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
 <td class="cell"><span class="error-mark">—</span>
-<div class="tooltip"><h4>Error:</h4><code>timeout (5s)</code>
+<div class="tooltip"><h4>Error:</h4><code>exit code 245</code>
 <h4>Reproduce:</h4><code>/usr/bin/python3 jbig2_ref_wrapper.py /Users/thakis/Downloads/T-REC-T.88-201808-I!!SOFT-ZST-E/Software/JBIG2_SampleSoftware-A20180829/source/jbig2 build/jbig2/bitmap-halftone-10bpp-mmr.jbig2 build/output/itu-ref/bitmap-halftone-10bpp-mmr.bmp</code>
 </div></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 </tr>
 <tr><td class="test-name">bitmap-halftone-10bpp<span class="file-links"><a href="build/jbig2/bitmap-halftone-10bpp.jbig2">jbig2</a><a href="build/pdfs/bitmap-halftone-10bpp.pdf">pdf</a><a href="https://github.com/SerenityOS/serenity/blob/master/Tests/LibGfx/test-inputs/jbig2/json/bitmap-halftone-10bpp.json">json</a></span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
@@ -491,6 +507,7 @@ Warning: Dependent image isn&#x27;t ready yet
 <img loading="lazy" src="build/diffs/itu-ref/bitmap-halftone-10bpp.png" alt="diff">
 <h4>Reproduce:</h4><code>/usr/bin/python3 jbig2_ref_wrapper.py /Users/thakis/Downloads/T-REC-T.88-201808-I!!SOFT-ZST-E/Software/JBIG2_SampleSoftware-A20180829/source/jbig2 build/jbig2/bitmap-halftone-10bpp.jbig2 build/output/itu-ref/bitmap-halftone-10bpp.bmp</code>
 </div></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 </tr>
 <tr><td class="test-name">bitmap-halftone-composite<span class="file-links"><a href="build/jbig2/bitmap-halftone-composite.jbig2">jbig2</a><a href="build/pdfs/bitmap-halftone-composite.pdf">pdf</a><a href="https://github.com/SerenityOS/serenity/blob/master/Tests/LibGfx/test-inputs/jbig2/json/bitmap-halftone-composite.json">json</a></span></td>
 <td class="cell"><span class="fail-mark">&#x2717;</span>
@@ -558,6 +575,7 @@ Warning: Dependent image isn&#x27;t ready yet
 <img loading="lazy" src="build/diffs/itu-ref/bitmap-halftone-composite.png" alt="diff">
 <h4>Reproduce:</h4><code>/usr/bin/python3 jbig2_ref_wrapper.py /Users/thakis/Downloads/T-REC-T.88-201808-I!!SOFT-ZST-E/Software/JBIG2_SampleSoftware-A20180829/source/jbig2 build/jbig2/bitmap-halftone-composite.jbig2 build/output/itu-ref/bitmap-halftone-composite.bmp</code>
 </div></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 </tr>
 <tr><td class="test-name">bitmap-halftone-global<span class="file-links"><a href="build/jbig2/bitmap-halftone-global.jbig2">jbig2</a><a href="build/pdfs/bitmap-halftone-global.pdf">pdf</a><a href="https://github.com/SerenityOS/serenity/blob/master/Tests/LibGfx/test-inputs/jbig2/json/bitmap-halftone-global.json">json</a></span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
@@ -576,6 +594,7 @@ Warning: Dependent image isn&#x27;t ready yet
 <img loading="lazy" src="build/diffs/itu-ref/bitmap-halftone-global.png" alt="diff">
 <h4>Reproduce:</h4><code>/usr/bin/python3 jbig2_ref_wrapper.py /Users/thakis/Downloads/T-REC-T.88-201808-I!!SOFT-ZST-E/Software/JBIG2_SampleSoftware-A20180829/source/jbig2 build/jbig2/bitmap-halftone-global.jbig2 build/output/itu-ref/bitmap-halftone-global.bmp</code>
 </div></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 </tr>
 <tr><td class="test-name">bitmap-halftone-grid<span class="file-links"><a href="build/jbig2/bitmap-halftone-grid.jbig2">jbig2</a><a href="build/pdfs/bitmap-halftone-grid.pdf">pdf</a><a href="https://github.com/SerenityOS/serenity/blob/master/Tests/LibGfx/test-inputs/jbig2/json/bitmap-halftone-grid.json">json</a></span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
@@ -594,6 +613,7 @@ Warning: Dependent image isn&#x27;t ready yet
 <img loading="lazy" src="build/diffs/itu-ref/bitmap-halftone-grid.png" alt="diff">
 <h4>Reproduce:</h4><code>/usr/bin/python3 jbig2_ref_wrapper.py /Users/thakis/Downloads/T-REC-T.88-201808-I!!SOFT-ZST-E/Software/JBIG2_SampleSoftware-A20180829/source/jbig2 build/jbig2/bitmap-halftone-grid.jbig2 build/output/itu-ref/bitmap-halftone-grid.bmp</code>
 </div></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 </tr>
 <tr><td class="test-name">bitmap-halftone-refine<span class="file-links"><a href="build/jbig2/bitmap-halftone-refine.jbig2">jbig2</a><a href="build/pdfs/bitmap-halftone-refine.pdf">pdf</a><a href="https://github.com/SerenityOS/serenity/blob/master/Tests/LibGfx/test-inputs/jbig2/json/bitmap-halftone-refine.json">json</a></span></td>
 <td class="cell"><span class="fail-mark">&#x2717;</span>
@@ -658,6 +678,7 @@ Warning: Dependent image isn&#x27;t ready yet
 <img loading="lazy" src="build/diffs/itu-ref/bitmap-halftone-refine.png" alt="diff">
 <h4>Reproduce:</h4><code>/usr/bin/python3 jbig2_ref_wrapper.py /Users/thakis/Downloads/T-REC-T.88-201808-I!!SOFT-ZST-E/Software/JBIG2_SampleSoftware-A20180829/source/jbig2 build/jbig2/bitmap-halftone-refine.jbig2 build/output/itu-ref/bitmap-halftone-refine.bmp</code>
 </div></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 </tr>
 <tr><td class="test-name">bitmap-halftone-skip-dummy<span class="file-links"><a href="build/jbig2/bitmap-halftone-skip-dummy.jbig2">jbig2</a><a href="build/pdfs/bitmap-halftone-skip-dummy.pdf">pdf</a><a href="https://github.com/SerenityOS/serenity/blob/master/Tests/LibGfx/test-inputs/jbig2/json/bitmap-halftone-skip-dummy.json">json</a></span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
@@ -704,6 +725,7 @@ Warning: Dependent image isn&#x27;t ready yet
 <img loading="lazy" src="build/diffs/itu-ref/bitmap-halftone-skip-dummy.png" alt="diff">
 <h4>Reproduce:</h4><code>/usr/bin/python3 jbig2_ref_wrapper.py /Users/thakis/Downloads/T-REC-T.88-201808-I!!SOFT-ZST-E/Software/JBIG2_SampleSoftware-A20180829/source/jbig2 build/jbig2/bitmap-halftone-skip-dummy.jbig2 build/output/itu-ref/bitmap-halftone-skip-dummy.bmp</code>
 </div></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 </tr>
 <tr><td class="test-name">bitmap-halftone-skip-grid-template1<span class="file-links"><a href="build/jbig2/bitmap-halftone-skip-grid-template1.jbig2">jbig2</a><a href="build/pdfs/bitmap-halftone-skip-grid-template1.pdf">pdf</a><a href="https://github.com/SerenityOS/serenity/blob/master/Tests/LibGfx/test-inputs/jbig2/json/bitmap-halftone-skip-grid-template1.json">json</a></span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
@@ -746,6 +768,7 @@ Warning: Dependent image isn&#x27;t ready yet
 <div class="tooltip"><h4>Error:</h4><code>exit code 245</code>
 <h4>Reproduce:</h4><code>/usr/bin/python3 jbig2_ref_wrapper.py /Users/thakis/Downloads/T-REC-T.88-201808-I!!SOFT-ZST-E/Software/JBIG2_SampleSoftware-A20180829/source/jbig2 build/jbig2/bitmap-halftone-skip-grid-template1.jbig2 build/output/itu-ref/bitmap-halftone-skip-grid-template1.bmp</code>
 </div></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 </tr>
 <tr><td class="test-name">bitmap-halftone-skip-grid-template2<span class="file-links"><a href="build/jbig2/bitmap-halftone-skip-grid-template2.jbig2">jbig2</a><a href="build/pdfs/bitmap-halftone-skip-grid-template2.pdf">pdf</a><a href="https://github.com/SerenityOS/serenity/blob/master/Tests/LibGfx/test-inputs/jbig2/json/bitmap-halftone-skip-grid-template2.json">json</a></span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
@@ -788,6 +811,7 @@ Warning: Dependent image isn&#x27;t ready yet
 <div class="tooltip"><h4>Error:</h4><code>exit code 245</code>
 <h4>Reproduce:</h4><code>/usr/bin/python3 jbig2_ref_wrapper.py /Users/thakis/Downloads/T-REC-T.88-201808-I!!SOFT-ZST-E/Software/JBIG2_SampleSoftware-A20180829/source/jbig2 build/jbig2/bitmap-halftone-skip-grid-template2.jbig2 build/output/itu-ref/bitmap-halftone-skip-grid-template2.bmp</code>
 </div></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 </tr>
 <tr><td class="test-name">bitmap-halftone-skip-grid-template3<span class="file-links"><a href="build/jbig2/bitmap-halftone-skip-grid-template3.jbig2">jbig2</a><a href="build/pdfs/bitmap-halftone-skip-grid-template3.pdf">pdf</a><a href="https://github.com/SerenityOS/serenity/blob/master/Tests/LibGfx/test-inputs/jbig2/json/bitmap-halftone-skip-grid-template3.json">json</a></span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
@@ -830,6 +854,7 @@ Warning: Dependent image isn&#x27;t ready yet
 <div class="tooltip"><h4>Error:</h4><code>exit code 245</code>
 <h4>Reproduce:</h4><code>/usr/bin/python3 jbig2_ref_wrapper.py /Users/thakis/Downloads/T-REC-T.88-201808-I!!SOFT-ZST-E/Software/JBIG2_SampleSoftware-A20180829/source/jbig2 build/jbig2/bitmap-halftone-skip-grid-template3.jbig2 build/output/itu-ref/bitmap-halftone-skip-grid-template3.bmp</code>
 </div></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 </tr>
 <tr><td class="test-name">bitmap-halftone-skip-grid<span class="file-links"><a href="build/jbig2/bitmap-halftone-skip-grid.jbig2">jbig2</a><a href="build/pdfs/bitmap-halftone-skip-grid.pdf">pdf</a><a href="https://github.com/SerenityOS/serenity/blob/master/Tests/LibGfx/test-inputs/jbig2/json/bitmap-halftone-skip-grid.json">json</a></span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
@@ -872,6 +897,7 @@ Warning: Dependent image isn&#x27;t ready yet
 <div class="tooltip"><h4>Error:</h4><code>exit code 245</code>
 <h4>Reproduce:</h4><code>/usr/bin/python3 jbig2_ref_wrapper.py /Users/thakis/Downloads/T-REC-T.88-201808-I!!SOFT-ZST-E/Software/JBIG2_SampleSoftware-A20180829/source/jbig2 build/jbig2/bitmap-halftone-skip-grid.jbig2 build/output/itu-ref/bitmap-halftone-skip-grid.bmp</code>
 </div></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 </tr>
 <tr><td class="test-name">bitmap-halftone-template1<span class="file-links"><a href="build/jbig2/bitmap-halftone-template1.jbig2">jbig2</a><a href="build/pdfs/bitmap-halftone-template1.pdf">pdf</a><a href="https://github.com/SerenityOS/serenity/blob/master/Tests/LibGfx/test-inputs/jbig2/json/bitmap-halftone-template1.json">json</a></span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
@@ -890,6 +916,7 @@ Warning: Dependent image isn&#x27;t ready yet
 <img loading="lazy" src="build/diffs/itu-ref/bitmap-halftone-template1.png" alt="diff">
 <h4>Reproduce:</h4><code>/usr/bin/python3 jbig2_ref_wrapper.py /Users/thakis/Downloads/T-REC-T.88-201808-I!!SOFT-ZST-E/Software/JBIG2_SampleSoftware-A20180829/source/jbig2 build/jbig2/bitmap-halftone-template1.jbig2 build/output/itu-ref/bitmap-halftone-template1.bmp</code>
 </div></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 </tr>
 <tr><td class="test-name">bitmap-halftone-template2<span class="file-links"><a href="build/jbig2/bitmap-halftone-template2.jbig2">jbig2</a><a href="build/pdfs/bitmap-halftone-template2.pdf">pdf</a><a href="https://github.com/SerenityOS/serenity/blob/master/Tests/LibGfx/test-inputs/jbig2/json/bitmap-halftone-template2.json">json</a></span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
@@ -908,6 +935,7 @@ Warning: Dependent image isn&#x27;t ready yet
 <img loading="lazy" src="build/diffs/itu-ref/bitmap-halftone-template2.png" alt="diff">
 <h4>Reproduce:</h4><code>/usr/bin/python3 jbig2_ref_wrapper.py /Users/thakis/Downloads/T-REC-T.88-201808-I!!SOFT-ZST-E/Software/JBIG2_SampleSoftware-A20180829/source/jbig2 build/jbig2/bitmap-halftone-template2.jbig2 build/output/itu-ref/bitmap-halftone-template2.bmp</code>
 </div></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 </tr>
 <tr><td class="test-name">bitmap-halftone-template3<span class="file-links"><a href="build/jbig2/bitmap-halftone-template3.jbig2">jbig2</a><a href="build/pdfs/bitmap-halftone-template3.pdf">pdf</a><a href="https://github.com/SerenityOS/serenity/blob/master/Tests/LibGfx/test-inputs/jbig2/json/bitmap-halftone-template3.json">json</a></span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
@@ -926,6 +954,7 @@ Warning: Dependent image isn&#x27;t ready yet
 <img loading="lazy" src="build/diffs/itu-ref/bitmap-halftone-template3.png" alt="diff">
 <h4>Reproduce:</h4><code>/usr/bin/python3 jbig2_ref_wrapper.py /Users/thakis/Downloads/T-REC-T.88-201808-I!!SOFT-ZST-E/Software/JBIG2_SampleSoftware-A20180829/source/jbig2 build/jbig2/bitmap-halftone-template3.jbig2 build/output/itu-ref/bitmap-halftone-template3.bmp</code>
 </div></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 </tr>
 <tr><td class="test-name">bitmap-halftone<span class="file-links"><a href="build/jbig2/bitmap-halftone.jbig2">jbig2</a><a href="build/pdfs/bitmap-halftone.pdf">pdf</a><a href="https://github.com/SerenityOS/serenity/blob/master/Tests/LibGfx/test-inputs/jbig2/json/bitmap-halftone.json">json</a></span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
@@ -944,6 +973,7 @@ Warning: Dependent image isn&#x27;t ready yet
 <img loading="lazy" src="build/diffs/itu-ref/bitmap-halftone.png" alt="diff">
 <h4>Reproduce:</h4><code>/usr/bin/python3 jbig2_ref_wrapper.py /Users/thakis/Downloads/T-REC-T.88-201808-I!!SOFT-ZST-E/Software/JBIG2_SampleSoftware-A20180829/source/jbig2 build/jbig2/bitmap-halftone.jbig2 build/output/itu-ref/bitmap-halftone.bmp</code>
 </div></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 </tr>
 <tr><td class="test-name">bitmap-initially-unknown-size<span class="file-links"><a href="build/jbig2/bitmap-initially-unknown-size.jbig2">jbig2</a><a href="build/pdfs/bitmap-initially-unknown-size.pdf">pdf</a><a href="https://github.com/SerenityOS/serenity/blob/master/Tests/LibGfx/test-inputs/jbig2/json/bitmap-initially-unknown-size.json">json</a></span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
@@ -974,15 +1004,14 @@ Warning: Dependent image isn&#x27;t ready yet
 <img loading="lazy" src="build/diffs/itu-ref/bitmap-initially-unknown-size.png" alt="diff">
 <h4>Reproduce:</h4><code>/usr/bin/python3 jbig2_ref_wrapper.py /Users/thakis/Downloads/T-REC-T.88-201808-I!!SOFT-ZST-E/Software/JBIG2_SampleSoftware-A20180829/source/jbig2 build/jbig2/bitmap-initially-unknown-size.jbig2 build/output/itu-ref/bitmap-initially-unknown-size.bmp</code>
 </div></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 </tr>
 <tr><td class="test-name">bitmap-mmr<span class="file-links"><a href="build/jbig2/bitmap-mmr.jbig2">jbig2</a><a href="build/pdfs/bitmap-mmr.pdf">pdf</a><a href="https://github.com/SerenityOS/serenity/blob/master/Tests/LibGfx/test-inputs/jbig2/json/bitmap-mmr.json">json</a></span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
-<td class="cell"><span class="error-mark">—</span>
-<div class="tooltip"><h4>Error:</h4><code>timeout (5s)</code>
-<h4>Reproduce:</h4><code>sips -s format png -o build/output/preview/bitmap-mmr.png build/pdfs/bitmap-mmr.pdf</code>
-</div></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
@@ -1002,6 +1031,7 @@ Warning: Dependent image isn&#x27;t ready yet
 <div class="tooltip"><h4>Error:</h4><code>exit code 245</code>
 <h4>Reproduce:</h4><code>/usr/bin/python3 jbig2_ref_wrapper.py /Users/thakis/Downloads/T-REC-T.88-201808-I!!SOFT-ZST-E/Software/JBIG2_SampleSoftware-A20180829/source/jbig2 build/jbig2/bitmap-p32-eof.jbig2 build/output/itu-ref/bitmap-p32-eof.bmp</code>
 </div></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 </tr>
 <tr><td class="test-name">bitmap-randomaccess<span class="file-links"><a href="build/jbig2/bitmap-randomaccess.jbig2">jbig2</a><a href="build/pdfs/bitmap-randomaccess.pdf">pdf</a><a href="https://github.com/SerenityOS/serenity/blob/master/Tests/LibGfx/test-inputs/jbig2/json/bitmap-randomaccess.json">json</a></span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
@@ -1016,6 +1046,7 @@ Warning: Dependent image isn&#x27;t ready yet
 <div class="tooltip"><h4>Error:</h4><code>exit code 245</code>
 <h4>Reproduce:</h4><code>/usr/bin/python3 jbig2_ref_wrapper.py /Users/thakis/Downloads/T-REC-T.88-201808-I!!SOFT-ZST-E/Software/JBIG2_SampleSoftware-A20180829/source/jbig2 build/jbig2/bitmap-randomaccess.jbig2 build/output/itu-ref/bitmap-randomaccess.bmp</code>
 </div></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 </tr>
 <tr><td class="test-name">bitmap-refine-customat-tpgron<span class="file-links"><a href="build/jbig2/bitmap-refine-customat-tpgron.jbig2">jbig2</a><a href="build/pdfs/bitmap-refine-customat-tpgron.pdf">pdf</a><a href="https://github.com/SerenityOS/serenity/blob/master/Tests/LibGfx/test-inputs/jbig2/json/bitmap-refine-customat-tpgron.json">json</a></span></td>
 <td class="cell"><span class="fail-mark">&#x2717;</span>
@@ -1102,6 +1133,7 @@ Warning: Dependent image isn&#x27;t ready yet
 <img loading="lazy" src="build/diffs/itu-ref/bitmap-refine-customat-tpgron.png" alt="diff">
 <h4>Reproduce:</h4><code>/usr/bin/python3 jbig2_ref_wrapper.py /Users/thakis/Downloads/T-REC-T.88-201808-I!!SOFT-ZST-E/Software/JBIG2_SampleSoftware-A20180829/source/jbig2 build/jbig2/bitmap-refine-customat-tpgron.jbig2 build/output/itu-ref/bitmap-refine-customat-tpgron.bmp</code>
 </div></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 </tr>
 <tr><td class="test-name">bitmap-refine-customat<span class="file-links"><a href="build/jbig2/bitmap-refine-customat.jbig2">jbig2</a><a href="build/pdfs/bitmap-refine-customat.pdf">pdf</a><a href="https://github.com/SerenityOS/serenity/blob/master/Tests/LibGfx/test-inputs/jbig2/json/bitmap-refine-customat.json">json</a></span></td>
 <td class="cell"><span class="fail-mark">&#x2717;</span>
@@ -1174,6 +1206,7 @@ Warning: Dependent image isn&#x27;t ready yet
 <img loading="lazy" src="build/diffs/itu-ref/bitmap-refine-customat.png" alt="diff">
 <h4>Reproduce:</h4><code>/usr/bin/python3 jbig2_ref_wrapper.py /Users/thakis/Downloads/T-REC-T.88-201808-I!!SOFT-ZST-E/Software/JBIG2_SampleSoftware-A20180829/source/jbig2 build/jbig2/bitmap-refine-customat.jbig2 build/output/itu-ref/bitmap-refine-customat.bmp</code>
 </div></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 </tr>
 <tr><td class="test-name">bitmap-refine-lossless<span class="file-links"><a href="build/jbig2/bitmap-refine-lossless.jbig2">jbig2</a><a href="build/pdfs/bitmap-refine-lossless.pdf">pdf</a><a href="https://github.com/SerenityOS/serenity/blob/master/Tests/LibGfx/test-inputs/jbig2/json/bitmap-refine-lossless.json">json</a></span></td>
 <td class="cell"><span class="fail-mark">&#x2717;</span>
@@ -1246,6 +1279,7 @@ Warning: Dependent image isn&#x27;t ready yet
 <img loading="lazy" src="build/diffs/itu-ref/bitmap-refine-lossless.png" alt="diff">
 <h4>Reproduce:</h4><code>/usr/bin/python3 jbig2_ref_wrapper.py /Users/thakis/Downloads/T-REC-T.88-201808-I!!SOFT-ZST-E/Software/JBIG2_SampleSoftware-A20180829/source/jbig2 build/jbig2/bitmap-refine-lossless.jbig2 build/output/itu-ref/bitmap-refine-lossless.bmp</code>
 </div></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 </tr>
 <tr><td class="test-name">bitmap-refine-page-subrect<span class="file-links"><a href="build/jbig2/bitmap-refine-page-subrect.jbig2">jbig2</a><a href="build/pdfs/bitmap-refine-page-subrect.pdf">pdf</a><a href="https://github.com/SerenityOS/serenity/blob/master/Tests/LibGfx/test-inputs/jbig2/json/bitmap-refine-page-subrect.json">json</a></span></td>
 <td class="cell"><span class="fail-mark">&#x2717;</span>
@@ -1299,6 +1333,7 @@ Warning: Dependent image isn&#x27;t ready yet
 <img loading="lazy" src="build/diffs/itu-ref/bitmap-refine-page-subrect.png" alt="diff">
 <h4>Reproduce:</h4><code>/usr/bin/python3 jbig2_ref_wrapper.py /Users/thakis/Downloads/T-REC-T.88-201808-I!!SOFT-ZST-E/Software/JBIG2_SampleSoftware-A20180829/source/jbig2 build/jbig2/bitmap-refine-page-subrect.jbig2 build/output/itu-ref/bitmap-refine-page-subrect.bmp</code>
 </div></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 </tr>
 <tr><td class="test-name">bitmap-refine-page<span class="file-links"><a href="build/jbig2/bitmap-refine-page.jbig2">jbig2</a><a href="build/pdfs/bitmap-refine-page.pdf">pdf</a><a href="https://github.com/SerenityOS/serenity/blob/master/Tests/LibGfx/test-inputs/jbig2/json/bitmap-refine-page.json">json</a></span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
@@ -1329,6 +1364,7 @@ Warning: Dependent image isn&#x27;t ready yet
 <img loading="lazy" src="build/diffs/itu-ref/bitmap-refine-page.png" alt="diff">
 <h4>Reproduce:</h4><code>/usr/bin/python3 jbig2_ref_wrapper.py /Users/thakis/Downloads/T-REC-T.88-201808-I!!SOFT-ZST-E/Software/JBIG2_SampleSoftware-A20180829/source/jbig2 build/jbig2/bitmap-refine-page.jbig2 build/output/itu-ref/bitmap-refine-page.bmp</code>
 </div></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 </tr>
 <tr><td class="test-name">bitmap-refine-refine<span class="file-links"><a href="build/jbig2/bitmap-refine-refine.jbig2">jbig2</a><a href="build/pdfs/bitmap-refine-refine.pdf">pdf</a><a href="https://github.com/SerenityOS/serenity/blob/master/Tests/LibGfx/test-inputs/jbig2/json/bitmap-refine-refine.json">json</a></span></td>
 <td class="cell"><span class="fail-mark">&#x2717;</span>
@@ -1401,6 +1437,7 @@ Warning: Dependent image isn&#x27;t ready yet
 <img loading="lazy" src="build/diffs/itu-ref/bitmap-refine-refine.png" alt="diff">
 <h4>Reproduce:</h4><code>/usr/bin/python3 jbig2_ref_wrapper.py /Users/thakis/Downloads/T-REC-T.88-201808-I!!SOFT-ZST-E/Software/JBIG2_SampleSoftware-A20180829/source/jbig2 build/jbig2/bitmap-refine-refine.jbig2 build/output/itu-ref/bitmap-refine-refine.bmp</code>
 </div></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 </tr>
 <tr><td class="test-name">bitmap-refine-template1-tpgron<span class="file-links"><a href="build/jbig2/bitmap-refine-template1-tpgron.jbig2">jbig2</a><a href="build/pdfs/bitmap-refine-template1-tpgron.pdf">pdf</a><a href="https://github.com/SerenityOS/serenity/blob/master/Tests/LibGfx/test-inputs/jbig2/json/bitmap-refine-template1-tpgron.json">json</a></span></td>
 <td class="cell"><span class="fail-mark">&#x2717;</span>
@@ -1487,6 +1524,7 @@ Warning: Dependent image isn&#x27;t ready yet
 <img loading="lazy" src="build/diffs/itu-ref/bitmap-refine-template1-tpgron.png" alt="diff">
 <h4>Reproduce:</h4><code>/usr/bin/python3 jbig2_ref_wrapper.py /Users/thakis/Downloads/T-REC-T.88-201808-I!!SOFT-ZST-E/Software/JBIG2_SampleSoftware-A20180829/source/jbig2 build/jbig2/bitmap-refine-template1-tpgron.jbig2 build/output/itu-ref/bitmap-refine-template1-tpgron.bmp</code>
 </div></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 </tr>
 <tr><td class="test-name">bitmap-refine-template1<span class="file-links"><a href="build/jbig2/bitmap-refine-template1.jbig2">jbig2</a><a href="build/pdfs/bitmap-refine-template1.pdf">pdf</a><a href="https://github.com/SerenityOS/serenity/blob/master/Tests/LibGfx/test-inputs/jbig2/json/bitmap-refine-template1.json">json</a></span></td>
 <td class="cell"><span class="fail-mark">&#x2717;</span>
@@ -1559,6 +1597,7 @@ Warning: Dependent image isn&#x27;t ready yet
 <img loading="lazy" src="build/diffs/itu-ref/bitmap-refine-template1.png" alt="diff">
 <h4>Reproduce:</h4><code>/usr/bin/python3 jbig2_ref_wrapper.py /Users/thakis/Downloads/T-REC-T.88-201808-I!!SOFT-ZST-E/Software/JBIG2_SampleSoftware-A20180829/source/jbig2 build/jbig2/bitmap-refine-template1.jbig2 build/output/itu-ref/bitmap-refine-template1.bmp</code>
 </div></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 </tr>
 <tr><td class="test-name">bitmap-refine-tpgron<span class="file-links"><a href="build/jbig2/bitmap-refine-tpgron.jbig2">jbig2</a><a href="build/pdfs/bitmap-refine-tpgron.pdf">pdf</a><a href="https://github.com/SerenityOS/serenity/blob/master/Tests/LibGfx/test-inputs/jbig2/json/bitmap-refine-tpgron.json">json</a></span></td>
 <td class="cell"><span class="fail-mark">&#x2717;</span>
@@ -1638,9 +1677,10 @@ Warning: Dependent image isn&#x27;t ready yet
 </code>
 </div></td>
 <td class="cell"><span class="error-mark">—</span>
-<div class="tooltip"><h4>Error:</h4><code>exit code 245</code>
+<div class="tooltip"><h4>Error:</h4><code>timeout (5s)</code>
 <h4>Reproduce:</h4><code>/usr/bin/python3 jbig2_ref_wrapper.py /Users/thakis/Downloads/T-REC-T.88-201808-I!!SOFT-ZST-E/Software/JBIG2_SampleSoftware-A20180829/source/jbig2 build/jbig2/bitmap-refine-tpgron.jbig2 build/output/itu-ref/bitmap-refine-tpgron.bmp</code>
 </div></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 </tr>
 <tr><td class="test-name">bitmap-refine<span class="file-links"><a href="build/jbig2/bitmap-refine.jbig2">jbig2</a><a href="build/pdfs/bitmap-refine.pdf">pdf</a><a href="https://github.com/SerenityOS/serenity/blob/master/Tests/LibGfx/test-inputs/jbig2/json/bitmap-refine.json">json</a></span></td>
 <td class="cell"><span class="fail-mark">&#x2717;</span>
@@ -1713,6 +1753,7 @@ Warning: Dependent image isn&#x27;t ready yet
 <img loading="lazy" src="build/diffs/itu-ref/bitmap-refine.png" alt="diff">
 <h4>Reproduce:</h4><code>/usr/bin/python3 jbig2_ref_wrapper.py /Users/thakis/Downloads/T-REC-T.88-201808-I!!SOFT-ZST-E/Software/JBIG2_SampleSoftware-A20180829/source/jbig2 build/jbig2/bitmap-refine.jbig2 build/output/itu-ref/bitmap-refine.bmp</code>
 </div></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 </tr>
 <tr><td class="test-name">bitmap-stripe-initially-unknown-height<span class="file-links"><a href="build/jbig2/bitmap-stripe-initially-unknown-height.jbig2">jbig2</a><a href="build/pdfs/bitmap-stripe-initially-unknown-height.pdf">pdf</a><a href="https://github.com/SerenityOS/serenity/blob/master/Tests/LibGfx/test-inputs/jbig2/json/bitmap-stripe-initially-unknown-height.json">json</a></span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
@@ -1739,6 +1780,7 @@ Warning: Jbig2Stream: Falling back to JS JBIG2 decoder.
 <h4>stderr:</h4><code>libc++abi: terminating due to uncaught exception of type std::bad_alloc: std::bad_alloc
 </code>
 </div></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 </tr>
 <tr><td class="test-name">bitmap-stripe-last-implicit<span class="file-links"><a href="build/jbig2/bitmap-stripe-last-implicit.jbig2">jbig2</a><a href="build/pdfs/bitmap-stripe-last-implicit.pdf">pdf</a><a href="https://github.com/SerenityOS/serenity/blob/master/Tests/LibGfx/test-inputs/jbig2/json/bitmap-stripe-last-implicit.json">json</a></span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
@@ -1757,6 +1799,7 @@ Warning: Jbig2Stream: Falling back to JS JBIG2 decoder.
 <img loading="lazy" src="build/diffs/itu-ref/bitmap-stripe-last-implicit.png" alt="diff">
 <h4>Reproduce:</h4><code>/usr/bin/python3 jbig2_ref_wrapper.py /Users/thakis/Downloads/T-REC-T.88-201808-I!!SOFT-ZST-E/Software/JBIG2_SampleSoftware-A20180829/source/jbig2 build/jbig2/bitmap-stripe-last-implicit.jbig2 build/output/itu-ref/bitmap-stripe-last-implicit.bmp</code>
 </div></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 </tr>
 <tr><td class="test-name">bitmap-stripe-single-no-end-of-stripe<span class="file-links"><a href="build/jbig2/bitmap-stripe-single-no-end-of-stripe.jbig2">jbig2</a><a href="build/pdfs/bitmap-stripe-single-no-end-of-stripe.pdf">pdf</a><a href="https://github.com/SerenityOS/serenity/blob/master/Tests/LibGfx/test-inputs/jbig2/json/bitmap-stripe-single-no-end-of-stripe.json">json</a></span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
@@ -1768,8 +1811,10 @@ Warning: Jbig2Stream: Falling back to JS JBIG2 decoder.
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 </tr>
 <tr><td class="test-name">bitmap-stripe-single<span class="file-links"><a href="build/jbig2/bitmap-stripe-single.jbig2">jbig2</a><a href="build/pdfs/bitmap-stripe-single.pdf">pdf</a><a href="https://github.com/SerenityOS/serenity/blob/master/Tests/LibGfx/test-inputs/jbig2/json/bitmap-stripe-single.json">json</a></span></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
@@ -1797,6 +1842,7 @@ Warning: Jbig2Stream: Falling back to JS JBIG2 decoder.
 <img loading="lazy" src="build/diffs/itu-ref/bitmap-stripe.png" alt="diff">
 <h4>Reproduce:</h4><code>/usr/bin/python3 jbig2_ref_wrapper.py /Users/thakis/Downloads/T-REC-T.88-201808-I!!SOFT-ZST-E/Software/JBIG2_SampleSoftware-A20180829/source/jbig2 build/jbig2/bitmap-stripe.jbig2 build/output/itu-ref/bitmap-stripe.bmp</code>
 </div></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 </tr>
 <tr><td class="test-name">bitmap-symbol-32bit-arithint<span class="file-links"><a href="build/jbig2/bitmap-symbol-32bit-arithint.jbig2">jbig2</a><a href="build/pdfs/bitmap-symbol-32bit-arithint.pdf">pdf</a><a href="https://github.com/SerenityOS/serenity/blob/master/Tests/LibGfx/test-inputs/jbig2/json/bitmap-symbol-32bit-arithint.json">json</a></span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
@@ -1815,6 +1861,7 @@ Warning: Jbig2Stream: Falling back to JS JBIG2 decoder.
 <img loading="lazy" src="build/diffs/itu-ref/bitmap-symbol-32bit-arithint.png" alt="diff">
 <h4>Reproduce:</h4><code>/usr/bin/python3 jbig2_ref_wrapper.py /Users/thakis/Downloads/T-REC-T.88-201808-I!!SOFT-ZST-E/Software/JBIG2_SampleSoftware-A20180829/source/jbig2 build/jbig2/bitmap-symbol-32bit-arithint.jbig2 build/output/itu-ref/bitmap-symbol-32bit-arithint.bmp</code>
 </div></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 </tr>
 <tr><td class="test-name">bitmap-symbol-big-segmentid<span class="file-links"><a href="build/jbig2/bitmap-symbol-big-segmentid.jbig2">jbig2</a><a href="build/pdfs/bitmap-symbol-big-segmentid.pdf">pdf</a><a href="https://github.com/SerenityOS/serenity/blob/master/Tests/LibGfx/test-inputs/jbig2/json/bitmap-symbol-big-segmentid.json">json</a></span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
@@ -1833,6 +1880,7 @@ Warning: Jbig2Stream: Falling back to JS JBIG2 decoder.
 <img loading="lazy" src="build/diffs/itu-ref/bitmap-symbol-big-segmentid.png" alt="diff">
 <h4>Reproduce:</h4><code>/usr/bin/python3 jbig2_ref_wrapper.py /Users/thakis/Downloads/T-REC-T.88-201808-I!!SOFT-ZST-E/Software/JBIG2_SampleSoftware-A20180829/source/jbig2 build/jbig2/bitmap-symbol-big-segmentid.jbig2 build/output/itu-ref/bitmap-symbol-big-segmentid.bmp</code>
 </div></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 </tr>
 <tr><td class="test-name">bitmap-symbol-context-reuse<span class="file-links"><a href="build/jbig2/bitmap-symbol-context-reuse.jbig2">jbig2</a><a href="build/pdfs/bitmap-symbol-context-reuse.pdf">pdf</a><a href="https://github.com/SerenityOS/serenity/blob/master/Tests/LibGfx/test-inputs/jbig2/json/bitmap-symbol-context-reuse.json">json</a></span></td>
 <td class="cell"><span class="fail-mark">&#x2717;</span>
@@ -1909,6 +1957,7 @@ Syntax Error (681): readSymbolDictSeg reports syntax error!
 <h4>stderr:</h4><code>libc++abi: terminating due to uncaught exception of type std::bad_alloc: std::bad_alloc
 </code>
 </div></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 </tr>
 <tr><td class="test-name">bitmap-symbol-empty<span class="file-links"><a href="build/jbig2/bitmap-symbol-empty.jbig2">jbig2</a><a href="build/pdfs/bitmap-symbol-empty.pdf">pdf</a><a href="https://github.com/SerenityOS/serenity/blob/master/Tests/LibGfx/test-inputs/jbig2/json/bitmap-symbol-empty.json">json</a></span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
@@ -1923,6 +1972,7 @@ Syntax Error (681): readSymbolDictSeg reports syntax error!
 <div class="tooltip"><h4>Error:</h4><code>exit code 245</code>
 <h4>Reproduce:</h4><code>/usr/bin/python3 jbig2_ref_wrapper.py /Users/thakis/Downloads/T-REC-T.88-201808-I!!SOFT-ZST-E/Software/JBIG2_SampleSoftware-A20180829/source/jbig2 build/jbig2/bitmap-symbol-empty.jbig2 build/output/itu-ref/bitmap-symbol-empty.bmp</code>
 </div></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 </tr>
 <tr><td class="test-name">bitmap-symbol-global<span class="file-links"><a href="build/jbig2/bitmap-symbol-global.jbig2">jbig2</a><a href="build/pdfs/bitmap-symbol-global.pdf">pdf</a><a href="https://github.com/SerenityOS/serenity/blob/master/Tests/LibGfx/test-inputs/jbig2/json/bitmap-symbol-global.json">json</a></span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
@@ -1937,6 +1987,7 @@ Syntax Error (681): readSymbolDictSeg reports syntax error!
 <div class="tooltip"><h4>Error:</h4><code>exit code 245</code>
 <h4>Reproduce:</h4><code>/usr/bin/python3 jbig2_ref_wrapper.py /Users/thakis/Downloads/T-REC-T.88-201808-I!!SOFT-ZST-E/Software/JBIG2_SampleSoftware-A20180829/source/jbig2 build/jbig2/bitmap-symbol-global.jbig2 build/output/itu-ref/bitmap-symbol-global.bmp</code>
 </div></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 </tr>
 <tr><td class="test-name">bitmap-symbol-manyrefs<span class="file-links"><a href="build/jbig2/bitmap-symbol-manyrefs.jbig2">jbig2</a><a href="build/pdfs/bitmap-symbol-manyrefs.pdf">pdf</a><a href="https://github.com/SerenityOS/serenity/blob/master/Tests/LibGfx/test-inputs/jbig2/json/bitmap-symbol-manyrefs.json">json</a></span></td>
 <td class="cell"><span class="fail-mark">&#x2717;</span>
@@ -1978,6 +2029,7 @@ Syntax Error (681): readSymbolDictSeg reports syntax error!
 <img loading="lazy" src="build/diffs/itu-ref/bitmap-symbol-manyrefs.png" alt="diff">
 <h4>Reproduce:</h4><code>/usr/bin/python3 jbig2_ref_wrapper.py /Users/thakis/Downloads/T-REC-T.88-201808-I!!SOFT-ZST-E/Software/JBIG2_SampleSoftware-A20180829/source/jbig2 build/jbig2/bitmap-symbol-manyrefs.jbig2 build/output/itu-ref/bitmap-symbol-manyrefs.bmp</code>
 </div></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 </tr>
 <tr><td class="test-name">bitmap-symbol-negative-sbdsoffset<span class="file-links"><a href="build/jbig2/bitmap-symbol-negative-sbdsoffset.jbig2">jbig2</a><a href="build/pdfs/bitmap-symbol-negative-sbdsoffset.pdf">pdf</a><a href="https://github.com/SerenityOS/serenity/blob/master/Tests/LibGfx/test-inputs/jbig2/json/bitmap-symbol-negative-sbdsoffset.json">json</a></span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
@@ -1992,6 +2044,7 @@ Syntax Error (681): readSymbolDictSeg reports syntax error!
 <div class="tooltip"><h4>Error:</h4><code>exit code 245</code>
 <h4>Reproduce:</h4><code>/usr/bin/python3 jbig2_ref_wrapper.py /Users/thakis/Downloads/T-REC-T.88-201808-I!!SOFT-ZST-E/Software/JBIG2_SampleSoftware-A20180829/source/jbig2 build/jbig2/bitmap-symbol-negative-sbdsoffset.jbig2 build/output/itu-ref/bitmap-symbol-negative-sbdsoffset.bmp</code>
 </div></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 </tr>
 <tr><td class="test-name">bitmap-symbol-refine<span class="file-links"><a href="build/jbig2/bitmap-symbol-refine.jbig2">jbig2</a><a href="build/pdfs/bitmap-symbol-refine.pdf">pdf</a><a href="https://github.com/SerenityOS/serenity/blob/master/Tests/LibGfx/test-inputs/jbig2/json/bitmap-symbol-refine.json">json</a></span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
@@ -2022,6 +2075,7 @@ Warning: Dependent image isn&#x27;t ready yet
 <img loading="lazy" src="build/diffs/itu-ref/bitmap-symbol-refine.png" alt="diff">
 <h4>Reproduce:</h4><code>/usr/bin/python3 jbig2_ref_wrapper.py /Users/thakis/Downloads/T-REC-T.88-201808-I!!SOFT-ZST-E/Software/JBIG2_SampleSoftware-A20180829/source/jbig2 build/jbig2/bitmap-symbol-refine.jbig2 build/output/itu-ref/bitmap-symbol-refine.bmp</code>
 </div></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 </tr>
 <tr><td class="test-name">bitmap-symbol-symbolrefine-textrefine-export<span class="file-links"><a href="build/jbig2/bitmap-symbol-symbolrefine-textrefine-export.jbig2">jbig2</a><a href="build/pdfs/bitmap-symbol-symbolrefine-textrefine-export.pdf">pdf</a><a href="https://github.com/SerenityOS/serenity/blob/master/Tests/LibGfx/test-inputs/jbig2/json/bitmap-symbol-symbolrefine-textrefine-export.json">json</a></span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
@@ -2038,6 +2092,7 @@ Warning: Dependent image isn&#x27;t ready yet
 <h4>stderr:</h4><code>libc++abi: terminating due to uncaught exception of type std::bad_alloc: std::bad_alloc
 </code>
 </div></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 </tr>
 <tr><td class="test-name">bitmap-symbol-symbolrefine-textrefine<span class="file-links"><a href="build/jbig2/bitmap-symbol-symbolrefine-textrefine.jbig2">jbig2</a><a href="build/pdfs/bitmap-symbol-symbolrefine-textrefine.pdf">pdf</a><a href="https://github.com/SerenityOS/serenity/blob/master/Tests/LibGfx/test-inputs/jbig2/json/bitmap-symbol-symbolrefine-textrefine.json">json</a></span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
@@ -2052,6 +2107,7 @@ Warning: Dependent image isn&#x27;t ready yet
 <div class="tooltip"><h4>Error:</h4><code>exit code 245</code>
 <h4>Reproduce:</h4><code>/usr/bin/python3 jbig2_ref_wrapper.py /Users/thakis/Downloads/T-REC-T.88-201808-I!!SOFT-ZST-E/Software/JBIG2_SampleSoftware-A20180829/source/jbig2 build/jbig2/bitmap-symbol-symbolrefine-textrefine.jbig2 build/output/itu-ref/bitmap-symbol-symbolrefine-textrefine.bmp</code>
 </div></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 </tr>
 <tr><td class="test-name">bitmap-symbol-symbolrefineone-customat<span class="file-links"><a href="build/jbig2/bitmap-symbol-symbolrefineone-customat.jbig2">jbig2</a><a href="build/pdfs/bitmap-symbol-symbolrefineone-customat.pdf">pdf</a><a href="https://github.com/SerenityOS/serenity/blob/master/Tests/LibGfx/test-inputs/jbig2/json/bitmap-symbol-symbolrefineone-customat.json">json</a></span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
@@ -2070,6 +2126,7 @@ Warning: Dependent image isn&#x27;t ready yet
 <img loading="lazy" src="build/diffs/itu-ref/bitmap-symbol-symbolrefineone-customat.png" alt="diff">
 <h4>Reproduce:</h4><code>/usr/bin/python3 jbig2_ref_wrapper.py /Users/thakis/Downloads/T-REC-T.88-201808-I!!SOFT-ZST-E/Software/JBIG2_SampleSoftware-A20180829/source/jbig2 build/jbig2/bitmap-symbol-symbolrefineone-customat.jbig2 build/output/itu-ref/bitmap-symbol-symbolrefineone-customat.bmp</code>
 </div></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 </tr>
 <tr><td class="test-name">bitmap-symbol-symbolrefineone-template1<span class="file-links"><a href="build/jbig2/bitmap-symbol-symbolrefineone-template1.jbig2">jbig2</a><a href="build/pdfs/bitmap-symbol-symbolrefineone-template1.pdf">pdf</a><a href="https://github.com/SerenityOS/serenity/blob/master/Tests/LibGfx/test-inputs/jbig2/json/bitmap-symbol-symbolrefineone-template1.json">json</a></span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
@@ -2086,6 +2143,7 @@ Warning: Dependent image isn&#x27;t ready yet
 <h4>stderr:</h4><code>libc++abi: terminating due to uncaught exception of type std::bad_alloc: std::bad_alloc
 </code>
 </div></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 </tr>
 <tr><td class="test-name">bitmap-symbol-symbolrefineone<span class="file-links"><a href="build/jbig2/bitmap-symbol-symbolrefineone.jbig2">jbig2</a><a href="build/pdfs/bitmap-symbol-symbolrefineone.pdf">pdf</a><a href="https://github.com/SerenityOS/serenity/blob/master/Tests/LibGfx/test-inputs/jbig2/json/bitmap-symbol-symbolrefineone.json">json</a></span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
@@ -2104,6 +2162,7 @@ Warning: Dependent image isn&#x27;t ready yet
 <img loading="lazy" src="build/diffs/itu-ref/bitmap-symbol-symbolrefineone.png" alt="diff">
 <h4>Reproduce:</h4><code>/usr/bin/python3 jbig2_ref_wrapper.py /Users/thakis/Downloads/T-REC-T.88-201808-I!!SOFT-ZST-E/Software/JBIG2_SampleSoftware-A20180829/source/jbig2 build/jbig2/bitmap-symbol-symbolrefineone.jbig2 build/output/itu-ref/bitmap-symbol-symbolrefineone.bmp</code>
 </div></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 </tr>
 <tr><td class="test-name">bitmap-symbol-symbolrefineseveral<span class="file-links"><a href="build/jbig2/bitmap-symbol-symbolrefineseveral.jbig2">jbig2</a><a href="build/pdfs/bitmap-symbol-symbolrefineseveral.pdf">pdf</a><a href="https://github.com/SerenityOS/serenity/blob/master/Tests/LibGfx/test-inputs/jbig2/json/bitmap-symbol-symbolrefineseveral.json">json</a></span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
@@ -2122,6 +2181,7 @@ Warning: Dependent image isn&#x27;t ready yet
 <img loading="lazy" src="build/diffs/itu-ref/bitmap-symbol-symbolrefineseveral.png" alt="diff">
 <h4>Reproduce:</h4><code>/usr/bin/python3 jbig2_ref_wrapper.py /Users/thakis/Downloads/T-REC-T.88-201808-I!!SOFT-ZST-E/Software/JBIG2_SampleSoftware-A20180829/source/jbig2 build/jbig2/bitmap-symbol-symbolrefineseveral.jbig2 build/output/itu-ref/bitmap-symbol-symbolrefineseveral.bmp</code>
 </div></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 </tr>
 <tr><td class="test-name">bitmap-symbol-symhuff-texthuff-runcodes32-34<span class="file-links"><a href="build/jbig2/bitmap-symbol-symhuff-texthuff-runcodes32-34.jbig2">jbig2</a><a href="build/pdfs/bitmap-symbol-symhuff-texthuff-runcodes32-34.pdf">pdf</a><a href="https://github.com/SerenityOS/serenity/blob/master/Tests/LibGfx/test-inputs/jbig2/json/bitmap-symbol-symhuff-texthuff-runcodes32-34.json">json</a></span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
@@ -2133,9 +2193,10 @@ Warning: Dependent image isn&#x27;t ready yet
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
 <td class="cell"><span class="error-mark">—</span>
-<div class="tooltip"><h4>Error:</h4><code>exit code 245</code>
+<div class="tooltip"><h4>Error:</h4><code>timeout (5s)</code>
 <h4>Reproduce:</h4><code>/usr/bin/python3 jbig2_ref_wrapper.py /Users/thakis/Downloads/T-REC-T.88-201808-I!!SOFT-ZST-E/Software/JBIG2_SampleSoftware-A20180829/source/jbig2 build/jbig2/bitmap-symbol-symhuff-texthuff-runcodes32-34.jbig2 build/output/itu-ref/bitmap-symbol-symhuff-texthuff-runcodes32-34.bmp</code>
 </div></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 </tr>
 <tr><td class="test-name">bitmap-symbol-symhuff-texthuff<span class="file-links"><a href="build/jbig2/bitmap-symbol-symhuff-texthuff.jbig2">jbig2</a><a href="build/pdfs/bitmap-symbol-symhuff-texthuff.pdf">pdf</a><a href="https://github.com/SerenityOS/serenity/blob/master/Tests/LibGfx/test-inputs/jbig2/json/bitmap-symbol-symhuff-texthuff.json">json</a></span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
@@ -2164,6 +2225,7 @@ Warning: Dependent image isn&#x27;t ready yet
 <div class="tooltip"><h4>Error:</h4><code>exit code 245</code>
 <h4>Reproduce:</h4><code>/usr/bin/python3 jbig2_ref_wrapper.py /Users/thakis/Downloads/T-REC-T.88-201808-I!!SOFT-ZST-E/Software/JBIG2_SampleSoftware-A20180829/source/jbig2 build/jbig2/bitmap-symbol-symhuff-texthuff.jbig2 build/output/itu-ref/bitmap-symbol-symhuff-texthuff.bmp</code>
 </div></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 </tr>
 <tr><td class="test-name">bitmap-symbol-symhuff-texthuffB10B13<span class="file-links"><a href="build/jbig2/bitmap-symbol-symhuff-texthuffB10B13.jbig2">jbig2</a><a href="build/pdfs/bitmap-symbol-symhuff-texthuffB10B13.pdf">pdf</a><a href="https://github.com/SerenityOS/serenity/blob/master/Tests/LibGfx/test-inputs/jbig2/json/bitmap-symbol-symhuff-texthuffB10B13.json">json</a></span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
@@ -2192,6 +2254,7 @@ Warning: Dependent image isn&#x27;t ready yet
 <div class="tooltip"><h4>Error:</h4><code>exit code 245</code>
 <h4>Reproduce:</h4><code>/usr/bin/python3 jbig2_ref_wrapper.py /Users/thakis/Downloads/T-REC-T.88-201808-I!!SOFT-ZST-E/Software/JBIG2_SampleSoftware-A20180829/source/jbig2 build/jbig2/bitmap-symbol-symhuff-texthuffB10B13.jbig2 build/output/itu-ref/bitmap-symbol-symhuff-texthuffB10B13.bmp</code>
 </div></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 </tr>
 <tr><td class="test-name">bitmap-symbol-symhuffB5B3-texthuffB7B9B12<span class="file-links"><a href="build/jbig2/bitmap-symbol-symhuffB5B3-texthuffB7B9B12.jbig2">jbig2</a><a href="build/pdfs/bitmap-symbol-symhuffB5B3-texthuffB7B9B12.pdf">pdf</a><a href="https://github.com/SerenityOS/serenity/blob/master/Tests/LibGfx/test-inputs/jbig2/json/bitmap-symbol-symhuffB5B3-texthuffB7B9B12.json">json</a></span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
@@ -2228,6 +2291,7 @@ Syntax Error (628): readSymbolDictSeg reports syntax error!
 <h4>stderr:</h4><code>libc++abi: terminating due to uncaught exception of type std::bad_alloc: std::bad_alloc
 </code>
 </div></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 </tr>
 <tr><td class="test-name">bitmap-symbol-symhuffcustom-texthuffcustom<span class="file-links"><a href="build/jbig2/bitmap-symbol-symhuffcustom-texthuffcustom.jbig2">jbig2</a><a href="build/pdfs/bitmap-symbol-symhuffcustom-texthuffcustom.pdf">pdf</a><a href="https://github.com/SerenityOS/serenity/blob/master/Tests/LibGfx/test-inputs/jbig2/json/bitmap-symbol-symhuffcustom-texthuffcustom.json">json</a></span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
@@ -2258,6 +2322,7 @@ Syntax Error (628): readSymbolDictSeg reports syntax error!
 <h4>stderr:</h4><code>libc++abi: terminating due to uncaught exception of type std::bad_alloc: std::bad_alloc
 </code>
 </div></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 </tr>
 <tr><td class="test-name">bitmap-symbol-symhuffrefine-textrefine-export<span class="file-links"><a href="build/jbig2/bitmap-symbol-symhuffrefine-textrefine-export.jbig2">jbig2</a><a href="build/pdfs/bitmap-symbol-symhuffrefine-textrefine-export.pdf">pdf</a><a href="https://github.com/SerenityOS/serenity/blob/master/Tests/LibGfx/test-inputs/jbig2/json/bitmap-symbol-symhuffrefine-textrefine-export.json">json</a></span></td>
 <td class="cell"><span class="fail-mark">&#x2717;</span>
@@ -2341,6 +2406,7 @@ Warning: Dependent image isn&#x27;t ready yet
 <div class="tooltip"><h4>Error:</h4><code>timeout (5s)</code>
 <h4>Reproduce:</h4><code>/usr/bin/python3 jbig2_ref_wrapper.py /Users/thakis/Downloads/T-REC-T.88-201808-I!!SOFT-ZST-E/Software/JBIG2_SampleSoftware-A20180829/source/jbig2 build/jbig2/bitmap-symbol-symhuffrefine-textrefine-export.jbig2 build/output/itu-ref/bitmap-symbol-symhuffrefine-textrefine-export.bmp</code>
 </div></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 </tr>
 <tr><td class="test-name">bitmap-symbol-symhuffrefine-textrefine<span class="file-links"><a href="build/jbig2/bitmap-symbol-symhuffrefine-textrefine.jbig2">jbig2</a><a href="build/pdfs/bitmap-symbol-symhuffrefine-textrefine.pdf">pdf</a><a href="https://github.com/SerenityOS/serenity/blob/master/Tests/LibGfx/test-inputs/jbig2/json/bitmap-symbol-symhuffrefine-textrefine.json">json</a></span></td>
 <td class="cell"><span class="fail-mark">&#x2717;</span>
@@ -2424,6 +2490,7 @@ Warning: Dependent image isn&#x27;t ready yet
 <div class="tooltip"><h4>Error:</h4><code>timeout (5s)</code>
 <h4>Reproduce:</h4><code>/usr/bin/python3 jbig2_ref_wrapper.py /Users/thakis/Downloads/T-REC-T.88-201808-I!!SOFT-ZST-E/Software/JBIG2_SampleSoftware-A20180829/source/jbig2 build/jbig2/bitmap-symbol-symhuffrefine-textrefine.jbig2 build/output/itu-ref/bitmap-symbol-symhuffrefine-textrefine.bmp</code>
 </div></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 </tr>
 <tr><td class="test-name">bitmap-symbol-symhuffrefineone<span class="file-links"><a href="build/jbig2/bitmap-symbol-symhuffrefineone.jbig2">jbig2</a><a href="build/pdfs/bitmap-symbol-symhuffrefineone.pdf">pdf</a><a href="https://github.com/SerenityOS/serenity/blob/master/Tests/LibGfx/test-inputs/jbig2/json/bitmap-symbol-symhuffrefineone.json">json</a></span></td>
 <td class="cell"><span class="fail-mark">&#x2717;</span>
@@ -2484,6 +2551,7 @@ Warning: Dependent image isn&#x27;t ready yet
 <img loading="lazy" src="build/diffs/itu-ref/bitmap-symbol-symhuffrefineone.png" alt="diff">
 <h4>Reproduce:</h4><code>/usr/bin/python3 jbig2_ref_wrapper.py /Users/thakis/Downloads/T-REC-T.88-201808-I!!SOFT-ZST-E/Software/JBIG2_SampleSoftware-A20180829/source/jbig2 build/jbig2/bitmap-symbol-symhuffrefineone.jbig2 build/output/itu-ref/bitmap-symbol-symhuffrefineone.bmp</code>
 </div></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 </tr>
 <tr><td class="test-name">bitmap-symbol-symhuffrefineseveral<span class="file-links"><a href="build/jbig2/bitmap-symbol-symhuffrefineseveral.jbig2">jbig2</a><a href="build/pdfs/bitmap-symbol-symhuffrefineseveral.pdf">pdf</a><a href="https://github.com/SerenityOS/serenity/blob/master/Tests/LibGfx/test-inputs/jbig2/json/bitmap-symbol-symhuffrefineseveral.json">json</a></span></td>
 <td class="cell"><span class="fail-mark">&#x2717;</span>
@@ -2570,6 +2638,7 @@ Warning: Dependent image isn&#x27;t ready yet
 <h4>stderr:</h4><code>libc++abi: terminating due to uncaught exception of type std::bad_alloc: std::bad_alloc
 </code>
 </div></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 </tr>
 <tr><td class="test-name">bitmap-symbol-symhuffuncompressed-texthuff<span class="file-links"><a href="build/jbig2/bitmap-symbol-symhuffuncompressed-texthuff.jbig2">jbig2</a><a href="build/pdfs/bitmap-symbol-symhuffuncompressed-texthuff.pdf">pdf</a><a href="https://github.com/SerenityOS/serenity/blob/master/Tests/LibGfx/test-inputs/jbig2/json/bitmap-symbol-symhuffuncompressed-texthuff.json">json</a></span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
@@ -2584,6 +2653,7 @@ Warning: Dependent image isn&#x27;t ready yet
 <div class="tooltip"><h4>Error:</h4><code>exit code 245</code>
 <h4>Reproduce:</h4><code>/usr/bin/python3 jbig2_ref_wrapper.py /Users/thakis/Downloads/T-REC-T.88-201808-I!!SOFT-ZST-E/Software/JBIG2_SampleSoftware-A20180829/source/jbig2 build/jbig2/bitmap-symbol-symhuffuncompressed-texthuff.jbig2 build/output/itu-ref/bitmap-symbol-symhuffuncompressed-texthuff.bmp</code>
 </div></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 </tr>
 <tr><td class="test-name">bitmap-symbol-textbottomleft<span class="file-links"><a href="build/jbig2/bitmap-symbol-textbottomleft.jbig2">jbig2</a><a href="build/pdfs/bitmap-symbol-textbottomleft.pdf">pdf</a><a href="https://github.com/SerenityOS/serenity/blob/master/Tests/LibGfx/test-inputs/jbig2/json/bitmap-symbol-textbottomleft.json">json</a></span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
@@ -2602,6 +2672,7 @@ Warning: Dependent image isn&#x27;t ready yet
 <img loading="lazy" src="build/diffs/itu-ref/bitmap-symbol-textbottomleft.png" alt="diff">
 <h4>Reproduce:</h4><code>/usr/bin/python3 jbig2_ref_wrapper.py /Users/thakis/Downloads/T-REC-T.88-201808-I!!SOFT-ZST-E/Software/JBIG2_SampleSoftware-A20180829/source/jbig2 build/jbig2/bitmap-symbol-textbottomleft.jbig2 build/output/itu-ref/bitmap-symbol-textbottomleft.bmp</code>
 </div></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 </tr>
 <tr><td class="test-name">bitmap-symbol-textbottomlefttranspose<span class="file-links"><a href="build/jbig2/bitmap-symbol-textbottomlefttranspose.jbig2">jbig2</a><a href="build/pdfs/bitmap-symbol-textbottomlefttranspose.pdf">pdf</a><a href="https://github.com/SerenityOS/serenity/blob/master/Tests/LibGfx/test-inputs/jbig2/json/bitmap-symbol-textbottomlefttranspose.json">json</a></span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
@@ -2626,6 +2697,7 @@ Warning: Jbig2Stream: Falling back to JS JBIG2 decoder.
 <div class="tooltip"><h4>Error:</h4><code>exit code 245</code>
 <h4>Reproduce:</h4><code>/usr/bin/python3 jbig2_ref_wrapper.py /Users/thakis/Downloads/T-REC-T.88-201808-I!!SOFT-ZST-E/Software/JBIG2_SampleSoftware-A20180829/source/jbig2 build/jbig2/bitmap-symbol-textbottomlefttranspose.jbig2 build/output/itu-ref/bitmap-symbol-textbottomlefttranspose.bmp</code>
 </div></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 </tr>
 <tr><td class="test-name">bitmap-symbol-textbottomright<span class="file-links"><a href="build/jbig2/bitmap-symbol-textbottomright.jbig2">jbig2</a><a href="build/pdfs/bitmap-symbol-textbottomright.pdf">pdf</a><a href="https://github.com/SerenityOS/serenity/blob/master/Tests/LibGfx/test-inputs/jbig2/json/bitmap-symbol-textbottomright.json">json</a></span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
@@ -2644,6 +2716,7 @@ Warning: Jbig2Stream: Falling back to JS JBIG2 decoder.
 <img loading="lazy" src="build/diffs/itu-ref/bitmap-symbol-textbottomright.png" alt="diff">
 <h4>Reproduce:</h4><code>/usr/bin/python3 jbig2_ref_wrapper.py /Users/thakis/Downloads/T-REC-T.88-201808-I!!SOFT-ZST-E/Software/JBIG2_SampleSoftware-A20180829/source/jbig2 build/jbig2/bitmap-symbol-textbottomright.jbig2 build/output/itu-ref/bitmap-symbol-textbottomright.bmp</code>
 </div></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 </tr>
 <tr><td class="test-name">bitmap-symbol-textbottomrighttranspose<span class="file-links"><a href="build/jbig2/bitmap-symbol-textbottomrighttranspose.jbig2">jbig2</a><a href="build/pdfs/bitmap-symbol-textbottomrighttranspose.pdf">pdf</a><a href="https://github.com/SerenityOS/serenity/blob/master/Tests/LibGfx/test-inputs/jbig2/json/bitmap-symbol-textbottomrighttranspose.json">json</a></span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
@@ -2668,6 +2741,7 @@ Warning: Jbig2Stream: Falling back to JS JBIG2 decoder.
 <div class="tooltip"><h4>Error:</h4><code>exit code 245</code>
 <h4>Reproduce:</h4><code>/usr/bin/python3 jbig2_ref_wrapper.py /Users/thakis/Downloads/T-REC-T.88-201808-I!!SOFT-ZST-E/Software/JBIG2_SampleSoftware-A20180829/source/jbig2 build/jbig2/bitmap-symbol-textbottomrighttranspose.jbig2 build/output/itu-ref/bitmap-symbol-textbottomrighttranspose.bmp</code>
 </div></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 </tr>
 <tr><td class="test-name">bitmap-symbol-textcomposite<span class="file-links"><a href="build/jbig2/bitmap-symbol-textcomposite.jbig2">jbig2</a><a href="build/pdfs/bitmap-symbol-textcomposite.pdf">pdf</a><a href="https://github.com/SerenityOS/serenity/blob/master/Tests/LibGfx/test-inputs/jbig2/json/bitmap-symbol-textcomposite.json">json</a></span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
@@ -2694,6 +2768,7 @@ Warning: Dependent image isn&#x27;t ready yet
 <div class="tooltip"><h4>Error:</h4><code>exit code 245</code>
 <h4>Reproduce:</h4><code>/usr/bin/python3 jbig2_ref_wrapper.py /Users/thakis/Downloads/T-REC-T.88-201808-I!!SOFT-ZST-E/Software/JBIG2_SampleSoftware-A20180829/source/jbig2 build/jbig2/bitmap-symbol-textcomposite.jbig2 build/output/itu-ref/bitmap-symbol-textcomposite.bmp</code>
 </div></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 </tr>
 <tr><td class="test-name">bitmap-symbol-texthuff-runcodes32-34<span class="file-links"><a href="build/jbig2/bitmap-symbol-texthuff-runcodes32-34.jbig2">jbig2</a><a href="build/pdfs/bitmap-symbol-texthuff-runcodes32-34.pdf">pdf</a><a href="https://github.com/SerenityOS/serenity/blob/master/Tests/LibGfx/test-inputs/jbig2/json/bitmap-symbol-texthuff-runcodes32-34.json">json</a></span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
@@ -2705,9 +2780,10 @@ Warning: Dependent image isn&#x27;t ready yet
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
 <td class="cell"><span class="error-mark">—</span>
-<div class="tooltip"><h4>Error:</h4><code>exit code 245</code>
+<div class="tooltip"><h4>Error:</h4><code>timeout (5s)</code>
 <h4>Reproduce:</h4><code>/usr/bin/python3 jbig2_ref_wrapper.py /Users/thakis/Downloads/T-REC-T.88-201808-I!!SOFT-ZST-E/Software/JBIG2_SampleSoftware-A20180829/source/jbig2 build/jbig2/bitmap-symbol-texthuff-runcodes32-34.jbig2 build/output/itu-ref/bitmap-symbol-texthuff-runcodes32-34.bmp</code>
 </div></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 </tr>
 <tr><td class="test-name">bitmap-symbol-texthuff-trailingsymbols<span class="file-links"><a href="build/jbig2/bitmap-symbol-texthuff-trailingsymbols.jbig2">jbig2</a><a href="build/pdfs/bitmap-symbol-texthuff-trailingsymbols.pdf">pdf</a><a href="https://github.com/SerenityOS/serenity/blob/master/Tests/LibGfx/test-inputs/jbig2/json/bitmap-symbol-texthuff-trailingsymbols.json">json</a></span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
@@ -2719,9 +2795,10 @@ Warning: Dependent image isn&#x27;t ready yet
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
 <td class="cell"><span class="error-mark">—</span>
-<div class="tooltip"><h4>Error:</h4><code>exit code 245</code>
+<div class="tooltip"><h4>Error:</h4><code>timeout (5s)</code>
 <h4>Reproduce:</h4><code>/usr/bin/python3 jbig2_ref_wrapper.py /Users/thakis/Downloads/T-REC-T.88-201808-I!!SOFT-ZST-E/Software/JBIG2_SampleSoftware-A20180829/source/jbig2 build/jbig2/bitmap-symbol-texthuff-trailingsymbols.jbig2 build/output/itu-ref/bitmap-symbol-texthuff-trailingsymbols.bmp</code>
 </div></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 </tr>
 <tr><td class="test-name">bitmap-symbol-texthuffrefine<span class="file-links"><a href="build/jbig2/bitmap-symbol-texthuffrefine.jbig2">jbig2</a><a href="build/pdfs/bitmap-symbol-texthuffrefine.pdf">pdf</a><a href="https://github.com/SerenityOS/serenity/blob/master/Tests/LibGfx/test-inputs/jbig2/json/bitmap-symbol-texthuffrefine.json">json</a></span></td>
 <td class="cell"><span class="fail-mark">&#x2717;</span>
@@ -2801,6 +2878,7 @@ Warning: Dependent image isn&#x27;t ready yet
 <h4>stderr:</h4><code>libc++abi: terminating due to uncaught exception of type std::bad_alloc: std::bad_alloc
 </code>
 </div></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 </tr>
 <tr><td class="test-name">bitmap-symbol-texthuffrefineB15<span class="file-links"><a href="build/jbig2/bitmap-symbol-texthuffrefineB15.jbig2">jbig2</a><a href="build/pdfs/bitmap-symbol-texthuffrefineB15.pdf">pdf</a><a href="https://github.com/SerenityOS/serenity/blob/master/Tests/LibGfx/test-inputs/jbig2/json/bitmap-symbol-texthuffrefineB15.json">json</a></span></td>
 <td class="cell"><span class="fail-mark">&#x2717;</span>
@@ -2880,6 +2958,7 @@ Warning: Dependent image isn&#x27;t ready yet
 <h4>stderr:</h4><code>libc++abi: terminating due to uncaught exception of type std::bad_alloc: std::bad_alloc
 </code>
 </div></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 </tr>
 <tr><td class="test-name">bitmap-symbol-texthuffrefinecustom<span class="file-links"><a href="build/jbig2/bitmap-symbol-texthuffrefinecustom.jbig2">jbig2</a><a href="build/pdfs/bitmap-symbol-texthuffrefinecustom.pdf">pdf</a><a href="https://github.com/SerenityOS/serenity/blob/master/Tests/LibGfx/test-inputs/jbig2/json/bitmap-symbol-texthuffrefinecustom.json">json</a></span></td>
 <td class="cell"><span class="fail-mark">&#x2717;</span>
@@ -2938,6 +3017,7 @@ Warning: Dependent image isn&#x27;t ready yet
 <h4>stderr:</h4><code>libc++abi: terminating due to uncaught exception of type std::bad_alloc: std::bad_alloc
 </code>
 </div></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 </tr>
 <tr><td class="test-name">bitmap-symbol-texthuffrefinecustomdims<span class="file-links"><a href="build/jbig2/bitmap-symbol-texthuffrefinecustomdims.jbig2">jbig2</a><a href="build/pdfs/bitmap-symbol-texthuffrefinecustomdims.pdf">pdf</a><a href="https://github.com/SerenityOS/serenity/blob/master/Tests/LibGfx/test-inputs/jbig2/json/bitmap-symbol-texthuffrefinecustomdims.json">json</a></span></td>
 <td class="cell"><span class="fail-mark">&#x2717;</span>
@@ -3012,11 +3092,10 @@ Warning: Dependent image isn&#x27;t ready yet
 </code>
 </div></td>
 <td class="cell"><span class="error-mark">—</span>
-<div class="tooltip"><h4>Error:</h4><code>exit code 250</code>
+<div class="tooltip"><h4>Error:</h4><code>timeout (5s)</code>
 <h4>Reproduce:</h4><code>/usr/bin/python3 jbig2_ref_wrapper.py /Users/thakis/Downloads/T-REC-T.88-201808-I!!SOFT-ZST-E/Software/JBIG2_SampleSoftware-A20180829/source/jbig2 build/jbig2/bitmap-symbol-texthuffrefinecustomdims.jbig2 build/output/itu-ref/bitmap-symbol-texthuffrefinecustomdims.bmp</code>
-<h4>stderr:</h4><code>libc++abi: terminating due to uncaught exception of type std::bad_alloc: std::bad_alloc
-</code>
 </div></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 </tr>
 <tr><td class="test-name">bitmap-symbol-texthuffrefinecustompos-global<span class="file-links"><a href="build/jbig2/bitmap-symbol-texthuffrefinecustompos-global.jbig2">jbig2</a><a href="build/pdfs/bitmap-symbol-texthuffrefinecustompos-global.pdf">pdf</a><a href="https://github.com/SerenityOS/serenity/blob/master/Tests/LibGfx/test-inputs/jbig2/json/bitmap-symbol-texthuffrefinecustompos-global.json">json</a></span></td>
 <td class="cell"><span class="fail-mark">&#x2717;</span>
@@ -3094,6 +3173,7 @@ Warning: Dependent image isn&#x27;t ready yet
 <div class="tooltip"><h4>Error:</h4><code>exit code 245</code>
 <h4>Reproduce:</h4><code>/usr/bin/python3 jbig2_ref_wrapper.py /Users/thakis/Downloads/T-REC-T.88-201808-I!!SOFT-ZST-E/Software/JBIG2_SampleSoftware-A20180829/source/jbig2 build/jbig2/bitmap-symbol-texthuffrefinecustompos-global.jbig2 build/output/itu-ref/bitmap-symbol-texthuffrefinecustompos-global.bmp</code>
 </div></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 </tr>
 <tr><td class="test-name">bitmap-symbol-texthuffrefinecustompos<span class="file-links"><a href="build/jbig2/bitmap-symbol-texthuffrefinecustompos.jbig2">jbig2</a><a href="build/pdfs/bitmap-symbol-texthuffrefinecustompos.pdf">pdf</a><a href="https://github.com/SerenityOS/serenity/blob/master/Tests/LibGfx/test-inputs/jbig2/json/bitmap-symbol-texthuffrefinecustompos.json">json</a></span></td>
 <td class="cell"><span class="fail-mark">&#x2717;</span>
@@ -3173,6 +3253,7 @@ Warning: Dependent image isn&#x27;t ready yet
 <h4>stderr:</h4><code>libc++abi: terminating due to uncaught exception of type std::bad_alloc: std::bad_alloc
 </code>
 </div></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 </tr>
 <tr><td class="test-name">bitmap-symbol-texthuffrefinecustomposdims<span class="file-links"><a href="build/jbig2/bitmap-symbol-texthuffrefinecustomposdims.jbig2">jbig2</a><a href="build/pdfs/bitmap-symbol-texthuffrefinecustomposdims.pdf">pdf</a><a href="https://github.com/SerenityOS/serenity/blob/master/Tests/LibGfx/test-inputs/jbig2/json/bitmap-symbol-texthuffrefinecustomposdims.json">json</a></span></td>
 <td class="cell"><span class="fail-mark">&#x2717;</span>
@@ -3231,6 +3312,7 @@ Warning: Dependent image isn&#x27;t ready yet
 <h4>stderr:</h4><code>libc++abi: terminating due to uncaught exception of type std::bad_alloc: std::bad_alloc
 </code>
 </div></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 </tr>
 <tr><td class="test-name">bitmap-symbol-texthuffrefinecustomsize<span class="file-links"><a href="build/jbig2/bitmap-symbol-texthuffrefinecustomsize.jbig2">jbig2</a><a href="build/pdfs/bitmap-symbol-texthuffrefinecustomsize.pdf">pdf</a><a href="https://github.com/SerenityOS/serenity/blob/master/Tests/LibGfx/test-inputs/jbig2/json/bitmap-symbol-texthuffrefinecustomsize.json">json</a></span></td>
 <td class="cell"><span class="fail-mark">&#x2717;</span>
@@ -3310,6 +3392,7 @@ Warning: Dependent image isn&#x27;t ready yet
 <h4>stderr:</h4><code>libc++abi: terminating due to uncaught exception of type std::bad_alloc: std::bad_alloc
 </code>
 </div></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 </tr>
 <tr><td class="test-name">bitmap-symbol-textrefine-customat<span class="file-links"><a href="build/jbig2/bitmap-symbol-textrefine-customat.jbig2">jbig2</a><a href="build/pdfs/bitmap-symbol-textrefine-customat.pdf">pdf</a><a href="https://github.com/SerenityOS/serenity/blob/master/Tests/LibGfx/test-inputs/jbig2/json/bitmap-symbol-textrefine-customat.json">json</a></span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
@@ -3326,6 +3409,7 @@ Warning: Dependent image isn&#x27;t ready yet
 <h4>stderr:</h4><code>libc++abi: terminating due to uncaught exception of type std::bad_alloc: std::bad_alloc
 </code>
 </div></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 </tr>
 <tr><td class="test-name">bitmap-symbol-textrefine-negative-delta-width<span class="file-links"><a href="build/jbig2/bitmap-symbol-textrefine-negative-delta-width.jbig2">jbig2</a><a href="build/pdfs/bitmap-symbol-textrefine-negative-delta-width.pdf">pdf</a><a href="https://github.com/SerenityOS/serenity/blob/master/Tests/LibGfx/test-inputs/jbig2/json/bitmap-symbol-textrefine-negative-delta-width.json">json</a></span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
@@ -3342,6 +3426,7 @@ Warning: Dependent image isn&#x27;t ready yet
 <h4>stderr:</h4><code>libc++abi: terminating due to uncaught exception of type std::bad_alloc: std::bad_alloc
 </code>
 </div></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 </tr>
 <tr><td class="test-name">bitmap-symbol-textrefine<span class="file-links"><a href="build/jbig2/bitmap-symbol-textrefine.jbig2">jbig2</a><a href="build/pdfs/bitmap-symbol-textrefine.pdf">pdf</a><a href="https://github.com/SerenityOS/serenity/blob/master/Tests/LibGfx/test-inputs/jbig2/json/bitmap-symbol-textrefine.json">json</a></span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
@@ -3352,14 +3437,11 @@ Warning: Dependent image isn&#x27;t ready yet
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
-<td class="cell"><span class="fail-mark">&#x2717;</span>
-<div class="tooltip">
-<h4>Decoder output:</h4>
-<img loading="lazy" src="build/output/itu-ref/bitmap-symbol-textrefine.webp" alt="output">
-<h4>Diff:</h4>
-<img loading="lazy" src="build/diffs/itu-ref/bitmap-symbol-textrefine.png" alt="diff">
+<td class="cell"><span class="error-mark">—</span>
+<div class="tooltip"><h4>Error:</h4><code>exit code 245</code>
 <h4>Reproduce:</h4><code>/usr/bin/python3 jbig2_ref_wrapper.py /Users/thakis/Downloads/T-REC-T.88-201808-I!!SOFT-ZST-E/Software/JBIG2_SampleSoftware-A20180829/source/jbig2 build/jbig2/bitmap-symbol-textrefine.jbig2 build/output/itu-ref/bitmap-symbol-textrefine.bmp</code>
 </div></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 </tr>
 <tr><td class="test-name">bitmap-symbol-texttopright<span class="file-links"><a href="build/jbig2/bitmap-symbol-texttopright.jbig2">jbig2</a><a href="build/pdfs/bitmap-symbol-texttopright.pdf">pdf</a><a href="https://github.com/SerenityOS/serenity/blob/master/Tests/LibGfx/test-inputs/jbig2/json/bitmap-symbol-texttopright.json">json</a></span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
@@ -3374,6 +3456,7 @@ Warning: Dependent image isn&#x27;t ready yet
 <div class="tooltip"><h4>Error:</h4><code>exit code 245</code>
 <h4>Reproduce:</h4><code>/usr/bin/python3 jbig2_ref_wrapper.py /Users/thakis/Downloads/T-REC-T.88-201808-I!!SOFT-ZST-E/Software/JBIG2_SampleSoftware-A20180829/source/jbig2 build/jbig2/bitmap-symbol-texttopright.jbig2 build/output/itu-ref/bitmap-symbol-texttopright.bmp</code>
 </div></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 </tr>
 <tr><td class="test-name">bitmap-symbol-texttoprighttranspose<span class="file-links"><a href="build/jbig2/bitmap-symbol-texttoprighttranspose.jbig2">jbig2</a><a href="build/pdfs/bitmap-symbol-texttoprighttranspose.pdf">pdf</a><a href="https://github.com/SerenityOS/serenity/blob/master/Tests/LibGfx/test-inputs/jbig2/json/bitmap-symbol-texttoprighttranspose.json">json</a></span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
@@ -3398,6 +3481,7 @@ Warning: Jbig2Stream: Falling back to JS JBIG2 decoder.
 <div class="tooltip"><h4>Error:</h4><code>exit code 245</code>
 <h4>Reproduce:</h4><code>/usr/bin/python3 jbig2_ref_wrapper.py /Users/thakis/Downloads/T-REC-T.88-201808-I!!SOFT-ZST-E/Software/JBIG2_SampleSoftware-A20180829/source/jbig2 build/jbig2/bitmap-symbol-texttoprighttranspose.jbig2 build/output/itu-ref/bitmap-symbol-texttoprighttranspose.bmp</code>
 </div></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 </tr>
 <tr><td class="test-name">bitmap-symbol-texttranspose<span class="file-links"><a href="build/jbig2/bitmap-symbol-texttranspose.jbig2">jbig2</a><a href="build/pdfs/bitmap-symbol-texttranspose.pdf">pdf</a><a href="https://github.com/SerenityOS/serenity/blob/master/Tests/LibGfx/test-inputs/jbig2/json/bitmap-symbol-texttranspose.json">json</a></span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
@@ -3412,6 +3496,7 @@ Warning: Jbig2Stream: Falling back to JS JBIG2 decoder.
 <div class="tooltip"><h4>Error:</h4><code>exit code 245</code>
 <h4>Reproduce:</h4><code>/usr/bin/python3 jbig2_ref_wrapper.py /Users/thakis/Downloads/T-REC-T.88-201808-I!!SOFT-ZST-E/Software/JBIG2_SampleSoftware-A20180829/source/jbig2 build/jbig2/bitmap-symbol-texttranspose.jbig2 build/output/itu-ref/bitmap-symbol-texttranspose.bmp</code>
 </div></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 </tr>
 <tr><td class="test-name">bitmap-symbol<span class="file-links"><a href="build/jbig2/bitmap-symbol.jbig2">jbig2</a><a href="build/pdfs/bitmap-symbol.pdf">pdf</a><a href="https://github.com/SerenityOS/serenity/blob/master/Tests/LibGfx/test-inputs/jbig2/json/bitmap-symbol.json">json</a></span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
@@ -3426,6 +3511,7 @@ Warning: Jbig2Stream: Falling back to JS JBIG2 decoder.
 <div class="tooltip"><h4>Error:</h4><code>exit code 245</code>
 <h4>Reproduce:</h4><code>/usr/bin/python3 jbig2_ref_wrapper.py /Users/thakis/Downloads/T-REC-T.88-201808-I!!SOFT-ZST-E/Software/JBIG2_SampleSoftware-A20180829/source/jbig2 build/jbig2/bitmap-symbol.jbig2 build/output/itu-ref/bitmap-symbol.bmp</code>
 </div></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 </tr>
 <tr><td class="test-name">bitmap-template1-customat-tpgdon<span class="file-links"><a href="build/jbig2/bitmap-template1-customat-tpgdon.jbig2">jbig2</a><a href="build/pdfs/bitmap-template1-customat-tpgdon.pdf">pdf</a><a href="https://github.com/SerenityOS/serenity/blob/master/Tests/LibGfx/test-inputs/jbig2/json/bitmap-template1-customat-tpgdon.json">json</a></span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
@@ -3437,8 +3523,10 @@ Warning: Jbig2Stream: Falling back to JS JBIG2 decoder.
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 </tr>
 <tr><td class="test-name">bitmap-template1-customat<span class="file-links"><a href="build/jbig2/bitmap-template1-customat.jbig2">jbig2</a><a href="build/pdfs/bitmap-template1-customat.pdf">pdf</a><a href="https://github.com/SerenityOS/serenity/blob/master/Tests/LibGfx/test-inputs/jbig2/json/bitmap-template1-customat.json">json</a></span></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
@@ -3466,8 +3554,10 @@ Warning: Jbig2Stream: Falling back to JS JBIG2 decoder.
 <img loading="lazy" src="build/diffs/itu-ref/bitmap-template1-tpgdon.png" alt="diff">
 <h4>Reproduce:</h4><code>/usr/bin/python3 jbig2_ref_wrapper.py /Users/thakis/Downloads/T-REC-T.88-201808-I!!SOFT-ZST-E/Software/JBIG2_SampleSoftware-A20180829/source/jbig2 build/jbig2/bitmap-template1-tpgdon.jbig2 build/output/itu-ref/bitmap-template1-tpgdon.bmp</code>
 </div></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 </tr>
 <tr><td class="test-name">bitmap-template1<span class="file-links"><a href="build/jbig2/bitmap-template1.jbig2">jbig2</a><a href="build/pdfs/bitmap-template1.pdf">pdf</a><a href="https://github.com/SerenityOS/serenity/blob/master/Tests/LibGfx/test-inputs/jbig2/json/bitmap-template1.json">json</a></span></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
@@ -3488,8 +3578,10 @@ Warning: Jbig2Stream: Falling back to JS JBIG2 decoder.
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 </tr>
 <tr><td class="test-name">bitmap-template2-customat<span class="file-links"><a href="build/jbig2/bitmap-template2-customat.jbig2">jbig2</a><a href="build/pdfs/bitmap-template2-customat.pdf">pdf</a><a href="https://github.com/SerenityOS/serenity/blob/master/Tests/LibGfx/test-inputs/jbig2/json/bitmap-template2-customat.json">json</a></span></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
@@ -3510,8 +3602,10 @@ Warning: Jbig2Stream: Falling back to JS JBIG2 decoder.
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 </tr>
 <tr><td class="test-name">bitmap-template2<span class="file-links"><a href="build/jbig2/bitmap-template2.jbig2">jbig2</a><a href="build/pdfs/bitmap-template2.pdf">pdf</a><a href="https://github.com/SerenityOS/serenity/blob/master/Tests/LibGfx/test-inputs/jbig2/json/bitmap-template2.json">json</a></span></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
@@ -3532,8 +3626,10 @@ Warning: Jbig2Stream: Falling back to JS JBIG2 decoder.
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 </tr>
 <tr><td class="test-name">bitmap-template3-customat<span class="file-links"><a href="build/jbig2/bitmap-template3-customat.jbig2">jbig2</a><a href="build/pdfs/bitmap-template3-customat.pdf">pdf</a><a href="https://github.com/SerenityOS/serenity/blob/master/Tests/LibGfx/test-inputs/jbig2/json/bitmap-template3-customat.json">json</a></span></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
@@ -3561,6 +3657,7 @@ Warning: Jbig2Stream: Falling back to JS JBIG2 decoder.
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 </tr>
 <tr><td class="test-name">bitmap-template3<span class="file-links"><a href="build/jbig2/bitmap-template3.jbig2">jbig2</a><a href="build/pdfs/bitmap-template3.pdf">pdf</a><a href="https://github.com/SerenityOS/serenity/blob/master/Tests/LibGfx/test-inputs/jbig2/json/bitmap-template3.json">json</a></span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
@@ -3572,8 +3669,10 @@ Warning: Jbig2Stream: Falling back to JS JBIG2 decoder.
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 </tr>
 <tr><td class="test-name">bitmap-tpgdon<span class="file-links"><a href="build/jbig2/bitmap-tpgdon.jbig2">jbig2</a><a href="build/pdfs/bitmap-tpgdon.pdf">pdf</a><a href="https://github.com/SerenityOS/serenity/blob/master/Tests/LibGfx/test-inputs/jbig2/json/bitmap-tpgdon.json">json</a></span></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
@@ -3655,6 +3754,7 @@ Warning: Dependent image isn&#x27;t ready yet
 <img loading="lazy" src="build/diffs/itu-ref/bitmap-trailing-7fff-stripped-harder-refine.png" alt="diff">
 <h4>Reproduce:</h4><code>/usr/bin/python3 jbig2_ref_wrapper.py /Users/thakis/Downloads/T-REC-T.88-201808-I!!SOFT-ZST-E/Software/JBIG2_SampleSoftware-A20180829/source/jbig2 build/jbig2/bitmap-trailing-7fff-stripped-harder-refine.jbig2 build/output/itu-ref/bitmap-trailing-7fff-stripped-harder-refine.bmp</code>
 </div></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 </tr>
 <tr><td class="test-name">bitmap-trailing-7fff-stripped-harder<span class="file-links"><a href="build/jbig2/bitmap-trailing-7fff-stripped-harder.jbig2">jbig2</a><a href="build/pdfs/bitmap-trailing-7fff-stripped-harder.pdf">pdf</a><a href="https://github.com/SerenityOS/serenity/blob/master/Tests/LibGfx/test-inputs/jbig2/json/bitmap-trailing-7fff-stripped-harder.json">json</a></span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
@@ -3673,6 +3773,7 @@ Warning: Dependent image isn&#x27;t ready yet
 <img loading="lazy" src="build/diffs/itu-ref/bitmap-trailing-7fff-stripped-harder.png" alt="diff">
 <h4>Reproduce:</h4><code>/usr/bin/python3 jbig2_ref_wrapper.py /Users/thakis/Downloads/T-REC-T.88-201808-I!!SOFT-ZST-E/Software/JBIG2_SampleSoftware-A20180829/source/jbig2 build/jbig2/bitmap-trailing-7fff-stripped-harder.jbig2 build/output/itu-ref/bitmap-trailing-7fff-stripped-harder.bmp</code>
 </div></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 </tr>
 <tr><td class="test-name">bitmap-trailing-7fff-stripped<span class="file-links"><a href="build/jbig2/bitmap-trailing-7fff-stripped.jbig2">jbig2</a><a href="build/pdfs/bitmap-trailing-7fff-stripped.pdf">pdf</a><a href="https://github.com/SerenityOS/serenity/blob/master/Tests/LibGfx/test-inputs/jbig2/json/bitmap-trailing-7fff-stripped.json">json</a></span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
@@ -3684,8 +3785,10 @@ Warning: Dependent image isn&#x27;t ready yet
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 </tr>
 <tr><td class="test-name">bitmap<span class="file-links"><a href="build/jbig2/bitmap.jbig2">jbig2</a><a href="build/pdfs/bitmap.pdf">pdf</a><a href="https://github.com/SerenityOS/serenity/blob/master/Tests/LibGfx/test-inputs/jbig2/json/bitmap.json">json</a></span></td>
+<td class="cell"><span class="pass-mark">&#x2713;</span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
