@@ -94,8 +94,8 @@ Download all test files: <a href="build/jbig2-tests.zip">jbig2</a>,
 <span class="error">1</span></div><div style="font-size:11px;color:#999;margin-top:2px">pdfjs-dist 5.4.624</div></div>
 <div class="summary-card"><h3>itu-ref</h3>
 <div class="num"><span class="pass">19</span> / 
-<span class="fail">38</span> / 
-<span class="error">50</span></div></div>
+<span class="fail">39</span> / 
+<span class="error">49</span></div></div>
 <div class="summary-card"><h3>hayro-jbig2</h3>
 <div class="num"><span class="pass">107</span> / 
 <span class="fail">0</span> / 
@@ -1028,7 +1028,7 @@ Warning: Dependent image isn&#x27;t ready yet
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
 <td class="cell"><span class="error-mark">—</span>
-<div class="tooltip"><h4>Error:</h4><code>timeout (5s)</code>
+<div class="tooltip"><h4>Error:</h4><code>exit code 245</code>
 <h4>Reproduce:</h4><code>/usr/bin/python3 jbig2_ref_wrapper.py /Users/thakis/Downloads/T-REC-T.88-201808-I!!SOFT-ZST-E/Software/JBIG2_SampleSoftware-A20180829/source/jbig2 build/jbig2/bitmap-p32-eof.jbig2 build/output/itu-ref/bitmap-p32-eof.bmp</code>
 </div></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
@@ -2104,7 +2104,7 @@ Warning: Dependent image isn&#x27;t ready yet
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
 <td class="cell"><span class="error-mark">—</span>
-<div class="tooltip"><h4>Error:</h4><code>exit code 245</code>
+<div class="tooltip"><h4>Error:</h4><code>exit code 246</code>
 <h4>Reproduce:</h4><code>/usr/bin/python3 jbig2_ref_wrapper.py /Users/thakis/Downloads/T-REC-T.88-201808-I!!SOFT-ZST-E/Software/JBIG2_SampleSoftware-A20180829/source/jbig2 build/jbig2/bitmap-symbol-symbolrefine-textrefine.jbig2 build/output/itu-ref/bitmap-symbol-symbolrefine-textrefine.bmp</code>
 </div></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
@@ -3439,8 +3439,12 @@ Warning: Dependent image isn&#x27;t ready yet
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
-<td class="cell"><span class="error-mark">—</span>
-<div class="tooltip"><h4>Error:</h4><code>exit code 245</code>
+<td class="cell"><span class="fail-mark">&#x2717;</span>
+<div class="tooltip">
+<h4>Decoder output:</h4>
+<img loading="lazy" src="build/output/itu-ref/bitmap-symbol-textrefine.webp" alt="output">
+<h4>Diff:</h4>
+<img loading="lazy" src="build/diffs/itu-ref/bitmap-symbol-textrefine.png" alt="diff">
 <h4>Reproduce:</h4><code>/usr/bin/python3 jbig2_ref_wrapper.py /Users/thakis/Downloads/T-REC-T.88-201808-I!!SOFT-ZST-E/Software/JBIG2_SampleSoftware-A20180829/source/jbig2 build/jbig2/bitmap-symbol-textrefine.jbig2 build/output/itu-ref/bitmap-symbol-textrefine.bmp</code>
 </div></td>
 <td class="cell"><span class="pass-mark">&#x2713;</span></td>
